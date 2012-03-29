@@ -1,0 +1,435 @@
+/**
+ * 	添加
+ */
+#subtitleAddForm {
+	margin: 0px 0 0 60px;
+}
+#subtitleAddForm .title, 
+#subtitleAddForm .origin, 
+#subtitleAddForm .author, 
+subtitleAddForm .subtitle, 
+#subtitleAddForm .tag, 
+#subtitleAddForm .kind, 
+#subtitleAddForm .media, 
+#subtitleAddForm .photo,
+#subtitleAddForm .subtitle {
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 13px;
+	color: #343434;
+}
+#subtitleAddForm .title-field input.textbox1, 
+#subtitleAddForm .origin-field input.textbox1, 
+#subtitleAddForm .author-field input.textbox1, 
+#subtitleAddForm .tag-field input.textbox1 {
+	font-family: sans-serif;
+	width: 556px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	outline: none;
+	border-radius: 2px;
+	-webkit-appearance: none;
+	border: 1px solid #ccc;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+#subtitleAddForm .title-field input.textbox1:focus, 
+#subtitleAddForm .origin-field input.textbox1:focus, 
+#subtitleAddForm .author-field input.textbox1:focus,
+#subtitleAddForm .tag-field input.textbox1:focus, 
+#subtitleAddForm .subtitle-field textarea:focus {
+	box-shadow: 0 0 10px #ccc;
+}
+#subtitleAddForm .title-field, 
+#subtitleAddForm .origin-field, 
+#subtitleAddForm .author-field, 
+#subtitleAddForm .subtitle-field, 
+#subtitleAddForm .tag-field, 
+#subtitleAddForm .kind-field, 
+#subtitleAddForm .media-field, 
+#subtitleAddForm .photo-field {
+	margin-bottom: 15px;
+	position: relative;
+}
+#subtitleAddForm .subtitle-field textarea {
+	font-family: sans-serif;
+	width: 556px;
+	height: 300px;
+	line-height: 30px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	resize: none;
+	border-radius: 2px;
+	outline: none;
+	background-color: #fff;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+
+
+#subtitleAddForm .media-field {
+	height: 30px;
+	position: relative;
+}
+
+#subtitleAddForm .photo-field .img-preview {
+	display: table-cell;
+	width: 138px;
+	height: 96px;
+	overflow: hidden;
+	vertical-align: middle;
+	z-index: -1;
+	font-size: 0;
+	line-height: 0;
+}
+#subtitleAddForm .photo-field .img-preview img {
+	max-width: 138px;
+	max-height: 96px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+#subtitleAddForm .photo-field {
+	text-align: center;
+	width: 138px;
+	height: 96px;
+	display: block;
+	border: 1px dashed #aaa;
+	position: relative;
+}
+#subtitleAddForm .photo-field #photo-uploader {
+	width: 138px;
+	height: 96px;
+	display: block;
+	overflow: hidden;
+}
+#subtitleAddForm #photo-uploader, 
+#subtitleAddForm #photo-uploader .qq-uploader, 
+#subtitleAddForm #photo-uploader .qq-upload-button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#subtitleAddForm #media-uploader .qq-upload-button {
+	border: 1px solid #cfcfcf;
+	border-radius: 3px;
+	background: none;
+	color: #222;
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ededed));
+	background-image: -moz-linear-gradient(top,#ffffff 0,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+#subtitleAddForm #media-uploader .qq-upload-button-hover {
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#e1e1e1));
+	background-image: -moz-linear-gradient(top,#ffffff 0,#e1e1e1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1');
+}
+#subtitleAddForm #photo-uploader .qq-upload-drop-area, 
+#subtitleAddForm #photo-uploader .qq-upload-button {
+	overflow: hidden;
+}
+#subtitleAddForm #photo-uploader .qq-upload-button {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	color: #222;
+	line-height: 98px;
+	text-indent: -9999px;
+}
+#subtitleAddForm #photo-uploader .qq-upload-button input {
+	font-size: 200px !important;
+}
+#subtitleAddForm #photo-uploader .qq-uploader ul.qq-upload-list li {
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	display: block;
+}
+#subtitleAddForm .qq-uploader ul.qq-upload-list li span {
+}
+#subtitleAddForm .photo-field .tips {
+	width: 138px;
+	height: 96px;
+	line-height: 96px;
+	font-size: 12px;
+	text-align: center;
+}
+#subtitleAddForm .qq-upload-drop-area {
+	text-indent: -999px;
+	background: none;
+}
+#subtitleAddForm .qq-upload-drop-area-active {
+	background-color: #FF7171;
+	text-indent: 0;
+}
+#subtitleAddForm .media-field .tips {
+	background: url(../../img/step.png) no-repeat -5px -337px;
+	width: 185px;
+	height: 30px;
+	margin: 0px auto;
+}
+#subtitleAddForm .submit {
+	display: block;
+	width: 560px;
+	text-align: center;
+	margin-bottom: 20px;
+	position: relative;
+}
+/*
+#subtitleAddForm .submit .btn-submit:hover {
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#4dadfe),to(#008cff));
+	background-image: -moz-linear-gradient(top,#4dadfe 0,#008cff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dadfe', endColorstr='#008cff');
+}
+#subtitleAddForm .submit .btn-submit:active {
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#008cff),to(#4dadfe));
+	background-image: -moz-linear-gradient(top,#008cff 0,#4dadfe 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008cff', endColorstr='#4dadfe');
+}
+*/
+#subtitleAddForm .submit .btn-submit {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 0;
+	height: 31px;
+	width: 128px;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	text-indent: -999px;
+	overflow: hidden;
+	background: url(//static.cikuapp.com/Ciku/img/media/button-upload-resource.png) no-repeat 0 0;
+	/*
+	
+	color: #fff;
+	width: 110px;
+	border-radius: 3px;
+	-webkit-appearance: none;
+	border: 1px solid #3097ed;
+	overflow: hidden;
+	background-color: #4dadfe;
+	cursor: pointer;
+	
+	-webkit-transition: all 300ms ease-out 0ms;
+	-moz-transition: all 300ms ease-out 0ms;
+	transition: all 300ms ease-out 0ms;
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#4dadfe),to(#4da2ed));
+	background-image: -moz-linear-gradient(top,#4dadfe 0,#4da2ed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4dadfe', endColorstr='#4da2ed');
+	*/
+}
+#subtitleAddForm .submit .btn-submit:hover {
+	background-position: 0 -31px;
+}
+#subtitleAddForm .submit .btn-submit:active {
+	background-position: 0 -62px;
+}
+
+/**
+ * 	添加页面表单验证
+ */
+.validate-result {
+	display: inline;
+	padding-left: 10px;
+	opacity: 0;
+	-webkit-transition: opacity 300ms ease-in 0ms;
+	-moz-transition: opacity 300ms ease-in 0ms;
+	transition: opacity 300ms ease-in 0ms;
+}
+.validate-result .error {
+	font-weight: bold;
+	color: #bf1623;
+}
+.validate-result-failed {
+	opacity: 1;
+}
+.validate-result-failed .error {
+	display: inline;
+}
+#subtitleAddForm .photo-field .validate-result-success, 
+#subtitleAddForm .media-field .validate-result-success, 
+#subtitleAddForm .subtitle-field .validate-result-success, 
+#subtitleAddForm .title-field .validate-result-success, 
+#subtitleAddForm .photo-field .validate-result-failed, 
+#subtitleAddForm .media-field .validate-result-failed, 
+#subtitleAddForm .subtitle-field .validate-result-failed, 
+#subtitleAddForm .title-field .validate-result-failed {
+	opacity: 1;
+}
+/*
+.validate-result-success {
+	background: url(../../img/btns.png) no-repeat -118px 0;
+}
+.validate-result-failed {
+	background: url(../../img/btns.png) no-repeat -165px 0;
+}
+#subtitleAddForm .photo-field .validate-result {
+	left: 210px;
+	top: 90px;
+}
+#subtitleAddForm .media-field .validate-result {
+	left: 120px;
+	top: 0px;
+}
+#subtitleAddForm .subtitle-field .validate-result {
+	left: 520px;
+	top: -30px;
+}
+#subtitleAddForm .subtitleFile-upload .validate-result {
+	left: 210px;
+	top: 3px;
+}
+#subtitleAddForm .subtitleFile-textarea .validate-result {
+	left: 425px;
+	top: 12px;
+}
+#subtitleAddForm .subtitleFile-textarea {
+	position: relative;
+	padding-top: 10px;
+}
+#subtitleAddForm .title-field .validate-result {
+	left: 520px;
+	top: 2px;
+}
+*/
+#subtitleAddForm:after {
+	bottom: 60px;
+}
+#subtitleAddForm ul.qq-upload-list {
+	padding: 0;
+	margin: 0;
+	width: 415px;
+	height: 30px;
+	overflow: hidden;
+	text-align: left;
+	position: absolute;
+	left: 160px;
+	top: 8px;
+}
+#subtitleAddForm .kind-field label {
+	width: 232px;
+	height: 33px;
+	position: relative;
+	display: block;
+}
+#subtitleAddForm .kind-field select {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	clip: rect(0,232px,33px,0);
+	vertical-align: middle;
+	width: 252px;
+	height: 33px;
+	line-height: 33px;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-left: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	apperance: none;
+	border: 0;
+	background: url(//static.cikuapp.com/Ciku/img/media/select-bg.png) no-repeat 0 0;
+}
+#subtitleAddForm .kind-field select:focus,
+#subtitleAddForm .kind-field label:focus {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	outline: none;
+}
+#subtitleAddForm .tag-wrapper {
+	display: block;
+	width: 563px;
+	position: relative;
+}
+#subtitleAddForm .tag-input {
+	border: 0;
+	height: 18px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 5px 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	outline: 0;
+	font-size: 14px;
+	line-height: 18px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#subtitleAddForm .tag-wrapper .tag {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 5px 16px 5px 0;
+	height: 18px;
+	border: 1px solid #939cc3;
+	border-radius: 1em;
+	font-family: arail, serif;
+	line-height: 17px;
+	font-size: 12px;
+	padding: 0 1em;
+	padding-right: 2em;
+	color: #6a7299;
+	background-image: -webkit-gradient(linear, 0 0,0 100%, from(#dbe6fa), to(#bbcff4)); 
+	background-image: -moz-linear-gradient(top, #dbe6fa 0, #bbcff4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbe6fa' ,endColorstr='#bbcff4');
+	-webkit-transition: all 300ms ease-out 0ms;
+	-moz-transition: all 300ms ease-out 0ms;
+	transition: all 300ms ease-out 0ms;
+}
+#subtitleAddForm .tag-wrapper .close-btn {
+	height: 12px;
+	width: 12px;
+	display: block;
+	position: absolute;
+	top: 3px;
+	right: 9px;
+	text-align: center;
+	line-height: 9px;
+	font-style: normal;
+	font-family: Arail;
+	text-decoration: none;
+	background-color: #ccc;
+	color: #fff;
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 12px;
+}
+#subtitleAddForm .tag-wrapper .close-btn:hover {
+	background-color: red;
+}
+#subtitleAddForm .taginput-wrapper {
+	position: relative;
+	z-index: 999;
+}
+#subtitleAddForm .tag-field {
+	z-index: 999;
+}
+#subtitleAddForm .taginput-wrapper ul {
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	top: 18px;
+	border: 1px solid #ccc; 
+	border-top: 0;
+	left: 0;
+}
+#subtitleAddForm .taginput-wrapper ul li {
+	color: #222;
+	line-height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	padding: 0 5px;
+}
+#subtitleAddForm .taginput-wrapper ul li.selected {
+	cursor: pointer;
+	background-color: #ccc;
+	color: #fff;
+}

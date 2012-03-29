@@ -1,0 +1,662 @@
+/**
+ * 	编辑
+ */
+
+.lrc-create {
+	margin: 0 auto;
+	width: 900px;
+	height: 600px;
+	padding-top: 20px;
+	position: relative;
+}
+.lrc-create .resource {
+	height: 500px;
+	margin-top: 20px;
+	position: relative;
+}
+/**
+ .lrc-create .audio {
+ display: block;
+ position: relative;
+ width: 100%;
+ margin: 0 auto 30px;
+ }
+ .lrc-create .audio .tips {
+ position: absolute;
+ font-size: 0;
+ width: 375px;
+ height: 115px;
+ right: 225px;
+ bottom: 125px;
+ background: url(../../img/tip2.png) no-repeat 0 0;
+ z-index: 999;
+ cursor: pointer;
+ display: none;
+ }
+ .lrc-create .audio .tips-1 {
+ position: absolute;
+ font-size: 0;
+ width: 375px;
+ height: 115px;
+ left: -7px;
+ bottom: 6px;
+ background: url(../../img/tip3.png) no-repeat 0 0;
+ z-index: 999;
+ cursor: pointer;
+ display: none;
+ }
+ .lrc-create .audio .tips-1:before {
+ content: '';
+ position: absolute;
+ box-shadow: 0 0 10px red;
+ font-size: 40px;
+ border-radius: 40px;
+ top: 86px;
+ left: 0px;
+ width: 40px;
+ height: 40px;
+ }
+ */
+.resource .lrc-area {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	width: 434px;
+	height: 500px;
+}
+.resource .lrc-area-full {
+	position: absolute;
+	right: 0;
+	width: 980px;
+	height: 500px;
+}
+.resource .creater {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+	width: 434px;
+	height: 100%;
+	overflow: hidden;
+}
+.lrcTextEditArea textarea {
+	width: 427px;
+	*width: 430px;
+	width: 430px\9;
+	height: 470px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.lrc-create textarea {
+	background-color: transparent;
+	border-radius: 0;
+	letter-spacing: 1px;
+}
+.lrc-create textarea:focus {
+	outline: none;
+}
+/**
+ * 	滚动条start
+ */
+/*
+.lrc-create ::-webkit-scrollbar {
+	height: 5px;
+	width: 9px;
+}
+.lrc-create ::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	border: 1px solid rgba(183,183,183,.4);
+	background-color: rgba(255,255,255, 1);
+	background-clip: padding-box;
+}
+.lrc-create textarea:hover::-webkit-scrollbar-thumb, .lrc-create div:hover::-webkit-scrollbar-thumb, .lrc-create ol:hover::-webkit-scrollbar-thumb {
+	background-image: -webkit-gradient(linear, left top, right top, from(gainsboro), to(white));
+	background-color: rgba(180, 180, 180, 1);
+	border: 1px solid rgba(183,183,183,1);
+}
+.lrc-create ::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+}
+.lrc-create ::-webkit-scrollbar-track {
+	background-color: rgba(180, 180, 180, .4);
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 0 4px;
+}
+.lrc-create textarea:hover::-webkit-scrollbar-track, .lrc-create div:hover::-webkit-scrollbar-track, .lrc-create ol:hover::-webkit-scrollbar-track {
+	background-color: rgba(180, 180, 180, 1);
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+.lrc-create ::-webkit-scrollbar-corner {
+	background: transparent;
+}
+*/
+/**
+ * 	滚动条end
+ */
+.subtitle-uploadbox {
+	display: none;
+}
+
+#lrc-list {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 500px;
+	width: 434px;
+	position: relative;
+	*zoom: 1;
+}
+#lrc-list li {
+	list-style: none;
+	position: relative;
+	width: 420px;
+	display: block;
+	font-size: 15px;
+	line-height: 15px;
+}
+/**
+ * 	段落分割线
+ */
+.paragraph-end-tips {
+	color: #3b7fdd;
+	text-align: center;
+	font-size: 12px;
+	overflow: hidden;
+	height: 30px;
+	line-height: 30px;
+	display: none;
+}
+#lrc-list li.hasParagraphEnd .paragraph-end-tips {
+	display: block;
+}
+/*
+#lrc-list li.hasParagraphEnd:after {
+	position: absolute;
+	bottom: -21px;
+	right: 0px;
+	content: '';
+	display: block;
+	height: 22px;
+	width: 362px;
+	background: url(../../img/paragraphEnd.png) no-repeat 290px 2px;
+	background-color: rgba(51,153,204,.2);
+}
+*/
+#lrc-list li.hasParagraphEnd button.J_lrcParagraphEnd {
+	background-color: #fff;
+}
+#lrc-list li.lrc-playing {
+	/*font-style: oblique;*/
+	background-color: #aaa !important;
+}
+#lrc-list li.lrc-playing textarea {
+	color: white !important;
+}
+#lrc-list li.lrc-playing .paragraph-end-tips {
+	color: white !important;
+}
+#lrc-list li:hover {
+	/*-webkit-animation: highlightLrcRow 300ms ease-in 0ms 1;*/
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+	background-color: white;
+}
+/*#lrc-list li .operate {
+ height: 0px;
+ -webkit-transform: scaleY(0);
+ -webkit-transform-origin: top left;
+ opacity: 0;
+ }
+ #lrc-list li:hover .operate {
+ -webkit-transform: scaleY(1);
+ -webkit-transition: all 300ms ease-in 0ms;
+ height: 30px;
+ opacity: 1;
+ display: block;
+ }*/
+#lrc-list li.selected {
+	background-color: white;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+#lrc-list li .operate {
+	position: absolute;
+	opacity: 0.2;
+	z-index: 9;
+	width: 330px;
+	top: 1px;
+	right: 10px;
+	height: 22px;
+	line-height: 22px;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+#lrc-list li:hover .operate {
+	opacity: 1;
+}
+/*
+#lrc-list li .operate .btns-single, #lrc-list li .operate .btns-multiple {
+	display: inline-block;
+}
+#lrc-list li .operateMultiple .btns-multiple {
+	display: inline-block;
+}
+*/
+#lrc-list li .operate button,
+.lrcTextEditArea .buttonArea button {
+	float: right;
+	opacity: 0.3;
+	background: none;
+	cursor: pointer;
+	opacity: 1;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	height: 22px;
+}
+.lrcTextEditArea .buttonArea button {
+	height: 23px;
+	border-bottom: 1px solid transparent;
+}
+#lrc-list li .operate button.J_lrcSkipTo {
+	float: left;
+}
+#lrc-list li:hover .operate button {
+	opacity: 1;
+}
+.lrcTextEditArea .buttonArea button:hover {
+	opacity: 1;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+#lrc-list li .operate button:hover {
+	background-color: #fff;
+}
+/*
+.J_lrcDelete, .J_lrcCombine, .J_lrcParagraphEnd {
+	overflow: hidden;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	text-indent: -999px;
+	-webkit-appearance: none;
+	border: 1px solid #ddd;
+}
+.J_lrcDelete {
+	background: url(../../img/Undo.png) no-repeat -7px -7px;
+	background-size: 30px 30px;
+}
+.J_lrcCombine {
+	background: url(../../img/Combine.png) no-repeat -7px -7px;
+	background-size: 30px 30px;
+}
+.J_lrcParagraphEnd {
+	background: url(../../img/para.png) no-repeat 1px 2px;
+	background-size: 15px 14px;
+}
+.J_lrcDelete:hover, .J_lrcCombine:hover, .J_lrcParagraphEnd:hover {
+	border-color: #000;
+}
+*/
+.J_lrcModifyTime,
+#J_formatLrc_btn {
+	display: none;
+}
+
+#lrc-list li .lrc-row-cap {
+	height: 22px;
+	line-height: 22px;
+	border-top: 1px solid #ccc;
+	background: #f0f0ee;
+	border-bottom: 1px solid #ccc;
+}
+#lrc-list li .begin-time-outer {
+	font-size: 12px;
+	line-height: 22px;
+	vertical-align: baseline;
+	padding: 0 10px;
+	color: green;
+	font-family: Tahoma, Verdana;
+}
+#lrc-list li .begin-time-outer input {
+	width: 56px;
+	vertical-align: baseline;
+	color: inherit;
+	z-index: 1;
+	text-align: center;
+	resize: none;
+	font-style: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 12px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Verdana;
+}
+/*
+#lrc-list li .begin-time-outer:before, #lrc-list li .begin-time-outer:after {
+	content: '[';
+	display: inline-block;
+	color: inherit;
+	line-height: 15px;
+	vertical-align: middle;
+	height: 16px;
+	font-style: inherit;
+}
+#lrc-list li .begin-time-outer:after {
+	content: ']';
+}
+*/
+#lrc-list li .subtitle {
+	border-radius: 0.5em;
+	background-color: transparent;
+	border: 1px solid transparent;;
+	-webkit-appearance: none;
+	resize: none;
+	font-style: inherit;
+	outline: none;
+	width: 400px;
+	margin: 5px;
+	color: inherit;
+	overflow: hidden;
+}
+#lrc-list li .begin-time-outer input:focus {
+	/*top: 0px;
+	 left: 0px;
+	 border-bottom: 1px solid #aaa;
+	 border-radius: 0.5em;*/
+	background-color: #aaa;
+	color: white;
+}
+#lrc-list .currentTimePoint {
+	background-color: #000;
+}
+.textarea_lrcTextResource {
+	border: 1px solid transparent;
+	outline: 0;
+	border-radius: 0.5em;
+	resize: none;
+	overflow: hidden;
+	cursor: text;
+}
+#J_lrcTextResourceInput.textarea_lrcTextResourceEditAble {
+	background-color: #fff;
+	cursor: text;
+}
+.lrcTextEditArea {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.lrcTextEditArea .tips {
+	display: none;
+	width: 337px;
+	height: 79px;
+	font-size: 0;
+	background: url(../../img/edit-cut.png) no-repeat 0 0;
+	text-indent: -999px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+.lrcTextEditArea .tips-show:after {
+	display: block;
+	position: absolute;
+	bottom: -100px;
+	right: -100px;
+	content: '';
+	width: 100px;
+	height: 100px;
+	background: url(../../img/mouse-dblclick.gif);
+}
+.lrcTextEditArea .buttonArea {
+	height: 22px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: #F0F0EE;
+}
+/*
+.lrcTextEditArea .buttonArea button {
+	display: block;
+	float: right;
+	width: 30px;
+	margin-left: 16px;
+	height: 30px;
+	border: 2px solid #aaa;
+	text-indent: -999px;
+	background: none;
+	font-size: 30px;
+	font-family: Arail;
+	border-radius: .5em;
+	opacity: 0.3;
+	-webkit-apperance: none;
+	-moz-apperance: none;
+	apperance: none;
+	cursor: pointer;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+.lrcTextEditArea .buttonArea button:hover, .lrcTextEditArea .buttonArea button.selected {
+	border-color: green;
+	opacity: 1;
+	box-shadow: 0 0 10px green;
+}
+*/
+/*
+#J_createrHelp_btn {
+	background: url(../../img/Question.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+#J_editLrc_btn {
+	background: url(../../img/edit.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+#J_editLrc_btn.progress {
+	background: url(../../img/apply.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+#J_formatLrc_btn {
+	background: url(../../img/Tools.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+*/
+.control-params {
+	display: none;
+}
+/**
+ * 	debug
+ */
+#J_LrcSourceFile {
+	display: block;
+}
+.connect-subtitle-and-text {
+	width: 553px;
+	height: 69px;
+	position: absolute;
+	top: 32px;
+	left: 175px;
+	background: url(../../img/pointer.png) no-repeat 0 0;
+	z-index: 999;
+}
+.cue {
+	display: none;
+}
+.lrc-area .cue-empty {
+	display: block;
+	position: absolute;
+	top: 108px;
+	left: 109px;
+	width: 300px;
+	height: 400px;
+	background: url(../../img/cue-subtitle.png) no-repeat 0 0;
+}
+.lrc-area .cue-empty:after, .creater .cue-success:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background: url(../../img/pet.png);
+	width: 186px;
+	height: 159px;
+}
+.creater .cue-success:after {
+	top: 50px;
+	left: 40px;
+}
+.creater .cue-success {
+	display: block;
+	position: absolute;
+	top: 108px;
+	left: 105px;
+	width: 270px;
+	height: 400px;
+	background: url(../../img/cue-mediatext-success.png) no-repeat 0 0;
+}
+.creater .cue-failed {
+	display: block;
+	position: absolute;
+	top: 108px;
+	left: 15px;
+	width: 500px;
+	height: 400px;
+	background: url(../../img/cue-mediatext-failed.png) no-repeat 0 0;
+}
+.subtitle-step2-edt .submit-area {
+	width: 980px;
+	margin: 3px auto;
+	text-align: center;
+}
+#J_LrcSourceFile, .subtitle-step2-edt .submit-area input, .subtitle-step2-edt .submit-area textarea {
+	display: none;
+}
+#J_LrcOrigin, #J_LrcDraft, #J_LrcFinish, #J_media_edit_form * {
+	display: none;
+}
+/**
+ * 	lrc编辑end
+ */
+
+#lrc-list li:last-child .J_lrcCombine {
+	display: none;
+}
+.media-edit-page {
+	background-color: #f5f5f5;
+}
+.lrc-create .audio {
+	position: relative;
+	height: 40px;
+	display: block;
+}
+.lrc-create .audio .audiojs {
+	position: absolute;
+	left: -40px;
+	top: 0;
+}
+#J_editLrc_btn.selected {
+	border-bottom: 1px solid #fff;
+	background-color: #fff;
+}
+.cue .complete {
+	margin-top: 226px;
+	text-align: center;
+	display: none;
+}
+.cue-success .complete {
+	display: block;
+	line-height: 30px;
+}
+#J_submitLrc {
+	display: block;
+	margin: 0 auto;
+	width: 128px;
+	height: 31px;
+	overflow: hidden;
+	cursor: pointer;
+	text-indent: -999px;
+	background: url(//static.cikuapp.com/Ciku/img/media/button-upload-resource.png) no-repeat 0 0;
+}
+#J_submitLrc {
+	margin-top: 5px;
+	background-position: 0 -186px;
+}
+
+#J_submitLrc:hover {
+	background-position: 0 -217px;
+}
+#J_submitLrc:active {
+	background-position: 0 -248px;
+}
+#J_previewLrc {
+	color: #397ddb;
+	font-size: 12px;
+	cursor: pointer;
+}
+#J_previewLrc:hover {
+	text-decoration: underline;
+}
+/*
+#J_previewLrc {
+	background-position: 0 -93px;
+}
+#J_previewLrc:hover {
+	background-position: 0 -124px;
+}
+#J_previewLrc:active {
+	background-position: 0 -155px;
+}
+*/
+#J_createrArea.edit-mode .cue {
+	display: none;
+}
+.media-edit-page .playing .time {
+	display: block!important;
+	opacity: 1!important;
+}
+
+
+.lrc-create .audio {
+	margin-left: -40px;
+}
+.lrc-create .audio .kitjs_audio {
+	box-shadow: none;
+}
+
+#J_autoSaveTips {
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	top: 0;
+	left: 50%;
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -150px;
+	color: #fff;
+	text-align: center;
+}
+#J_autoSaveTipsContent {
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #2c6fce;
+}
+#J_autoSaveTips.success #J_autoSaveTipsContent {
+	background-color: green;
+}
+#J_autoSaveTips.error #J_autoSaveTipsContent {
+	background-color: red;
+}

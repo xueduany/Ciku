@@ -1,0 +1,315 @@
+body {
+}
+.topboard {
+	height: 49px;
+	background-color: #3c8ddd;
+	background: url(//static.cikuapp.com/Ciku/img/media/common/topboard-bg.png) repeat-x;
+	position: relative;
+}
+.topboard-content {
+	width: 980px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+.topboard-menu {
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+	height: 32px;
+	width: 600px;
+}
+.topboard-menu li {
+	height: 32px;
+	width: 125px;
+	float: left;
+}
+.topboard-menu a {
+	display: block;
+	height: 32px;
+	width: 125px;
+	padding: 0;
+	text-align: center;
+	color: #000;
+	font-size: 12px;
+	line-height: 38px;
+	text-decoration: none;
+	overflow: hidden;
+}
+.topboard-menu .latest-resource a,
+.topboard-menu .favorite-resource a,
+.topboard-menu .upload-resource a,
+.topboard-menu .pending-resource a {
+	background: url(//static.cikuapp.com/Ciku/img/media/common/tab.png) no-repeat;
+	background-position: 0 -33px;
+	color: #fff;
+}
+.current-tab-is-latest .latest-resource a,
+.current-tab-is-favorite .favorite-resource a,
+.current-tab-is-upload .upload-resource a,
+.current-tab-is-pending .pending-resource a {
+	font-weight: bold;
+	background-position: 0 0px;
+	color: #000;
+}
+.topboard-menu li {
+	float: left;
+}
+.topboard-content s.left-corner {
+	display: block;
+	width: 1px;
+	height: 14px;
+	background-image: url(//static.cikuapp.com/Ciku/img/media/common/topboard-corner.png);
+	position: absolute;
+	left: 0px;
+	bottom: 8px;
+}
+.topboard-content s.right-corner {
+	display: block;
+	width: 1px;
+	height: 14px;
+	background-image: url(//static.cikuapp.com/Ciku/img/media/common/topboard-corner.png);
+	position: absolute;
+	right: 0px;
+	bottom: 8px;
+}
+.mainboard {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #fff;
+	*zoom: 1;
+}
+.mainboard-main {
+	float: left;
+	width: 734px;
+}
+.mainboard-right {
+	float: left;
+	width: 246px;
+	height: 1287px;
+	background: #383838;
+	background: url(//static.cikuapp.com/Ciku/img/media/common/sidebar-bg.png);
+}
+.mainboard-right s.bottom-shadow {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 253px;
+	height: 10px;
+	background: url(//static.cikuapp.com/Ciku/img/media/sidebar-seperator.png);
+}
+.pagination {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	margin: 50px auto;
+}
+.pagination ul {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.pagination li {
+	float: left;
+	margin-right: 10px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.pagination li a {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0 5px;
+	border: 1px solid #eee;
+	color: #2799dc; 
+	text-decoration: none;
+}
+.pagination li.disabled a {
+	color: #c3bbbb;
+}
+.pagination li.active a {
+	color: #ed8670;
+}
+.pagination li.next {
+	margin-right: 0;
+}
+
+.mainboard h3 {
+	height: 90px;
+	margin: 0;
+	line-height: 90px;
+	color: #c0c0c0;
+	font-size: 40px;
+	padding-left: 41px;
+	font-family: '微软雅黑',sans-serif,'黑体';
+	font-weight: normal;
+}
+
+
+/**
+ * 	滚动条start
+ */
+textarea::-webkit-scrollbar,
+div::-webkit-scrollbar,
+ol::-webkit-scrollbar {
+	height: 5px;
+	width: 9px;
+}
+textarea,
+ol,
+div {
+	scrollbar-arrow-color: #b7b7b7; /*三角箭头的颜色*/
+	scrollbar-face-color: #ffffff; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+	scrollbar-3dlight-color: #b7b7b7; /*立体滚动条亮边的颜色*/
+	scrollbar-highlight-color: #ffffff; /*滚动条的高亮颜色（左阴影？）*/
+	scrollbar-shadow-color: #ffffff; /*立体滚动条阴影的颜色*/
+	scrollbar-darkshadow-color: #b7b7b7; /*立体滚动条外阴影的颜色*/
+	scrollbar-track-color: #ffffff; /*立体滚动条背景颜色*/
+	scrollbar-base-color: #ffffff; /*滚动条的基色*/
+}
+textarea::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
+ol::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	border: 1px solid rgba(183,183,183,.4);
+	background-color: rgba(255,255,255, 1);
+	background-clip: padding-box;
+}
+textarea:hover::-webkit-scrollbar-thumb,
+div:hover::-webkit-scrollbar-thumb, 
+ol:hover::-webkit-scrollbar-thumb {
+	background-image: -webkit-gradient(linear, left top, right top, from(gainsboro), to(white));
+	background-color: rgba(180, 180, 180, 1);
+	border: 1px solid rgba(183,183,183,1);
+}
+textarea::-webkit-scrollbar-button,
+div::-webkit-scrollbar-button,
+ol::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+}
+textarea::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track,
+ol::-webkit-scrollbar-track {
+	background-color: rgba(180, 180, 180, .4);
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 0 4px;
+}
+textarea:hover::-webkit-scrollbar-track,
+div:hover::-webkit-scrollbar-track, 
+ol:hover::-webkit-scrollbar-track {
+	background-color: rgba(180, 180, 180, 1);
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+textarea::-webkit-scrollbar-corner,
+div::-webkit-scrollbar-corner,
+ol::-webkit-scrollbar-corner {
+	background: transparent;
+}
+.mainboard-ceiling {
+	height: 9px;
+	width: 100%;
+	background: url(//static.cikuapp.com/Ciku/img/media/ceiling.png) repeat-x;
+}
+
+.mainboard-right .download-area {
+	height: 220px;
+	background: url(//static.cikuapp.com/Ciku/img/media/t1.png) no-repeat 0 39px;
+}
+.mainboard-right .download-area .title {
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	top: 22px;
+	left: 64px;
+}
+.mainboard-right .download-area a {
+	display: none;
+}
+.mainboard-right li {
+	position: relative;
+}
+.mainboard-right .tag-area .title {
+	color: #fff;
+	font-size: 14px;
+	margin-top: 32px;
+	margin-left: 25px;
+}
+.mainboard-right .tag-area ul.tag-list {
+	width: 183px;
+	display: block;
+	margin-top: 5px;
+	margin-left: 23px;
+}
+.mainboard-right .tag-area ul.tag-list li {
+	height: 33px;
+	line-height: 33px;
+	position: relative;
+	overflow: hidden;
+	vertical-align: middle;
+	*zoom: 1;
+}
+.mainboard-right .tag-area ul.tag-list li .tag {
+	float: left;
+	height: 20px;
+	border: 1px solid #222;
+	border-radius: 1em;
+	font-size: 12px;
+	font-family: Arail,serif;
+	line-height: 20px;
+	padding: 0 15px;
+	background-color: #313131;
+	vertical-align: middle;
+	margin: 6px 0;
+}
+.mainboard-right .tag-area ul.tag-list li .tag a {
+	color: #fff;
+	text-decoration: none;
+}
+.mainboard-right .tag-area ul.tag-list li .tag a:hover {
+	text-decoration: underline;
+}
+.mainboard-right .tag-area ul.tag-list li .count {
+	float: right;
+	color: #fff;
+	vertical-align: middle;
+}
+#float-tips {
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	background: #2c6fce;
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -20px;
+	z-index: 99999;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0 0 10px #2c6fce;
+}
+#float-tips s {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	top: 12px;
+	left: 12px;
+	margin-right: 10px;
+	background: url(//static.cikuapp.com/Ciku/img/media/loading.gif);
+}
+#float-tips span {
+	text-align: center;
+	vertical-align: middle;
+}

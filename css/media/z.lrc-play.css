@@ -1,0 +1,126 @@
+.mainboard-main #article {
+	margin: 40px;
+	clear: both;
+	*float: left;
+	position: relative;
+}
+.mainboard-main #article h1 {
+	display: none;
+}
+.mainboard-main #article p.paragraph {
+	text-indent: 2em;
+	line-height: 1.5;
+	font-size: 16px;
+	margin: 2em 0;
+}
+.mainboard-main #article span.sentence {
+	display: inline;
+	font-family: verdana
+	line-height: 1.5;
+	padding: 4px 4px 4px 0;
+	font-size: 16px;
+	vertical-align: middle;
+	border-radius: 3px;
+	-webkit-transition: all 200ms ease-out 0ms;
+	-moz-transition: all 200ms ease-out 0ms;
+	transition: all 200ms ease-out 0ms;
+}
+.mainboard-main #article span.sentence d,
+.mainboard-main #article span.sentence w {
+	line-height: 1.5;
+}
+.audio-play {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	bottom: 0px;
+	z-index: 999;
+}
+.audio-play .audiojs {
+	margin: 0 auto;
+	-webkit-transition: all 500ms ease-out 0ms;
+	-moz-transition: all 500ms ease-out 0ms;
+	transition: all 500ms ease-out 0ms;
+}
+.current_playing_sentence {
+	background-color: #366fde;
+	color: #fff;
+}
+.play-artical-info {
+	margin: 30px 40px;
+}
+.operate-area {
+	position: relative;
+	width: 593px;
+	height: auto;
+	overflow: hidden;
+	*zoom: 1;
+	margin-top: 15px;
+	border-left: 5px solid #4383de;
+	border-right: 5px solid #4383de;
+}
+.operate-area table {
+	border: 0;
+	border-collapse: collapse;
+	width: 100%;
+	height: 100%;
+	background-color: #efefef;
+}
+.operate-area .gallary-box {
+	line-height: 0;
+	font-size: 0;
+}
+.operate-area .gallary-box img {
+	max-width: 425px;
+}
+.operate-area .operate-box {
+	text-align: center;
+	width: 100%;
+	vertical-align: bottom;
+}
+.operate-area .operate-box a.startPlayButton {
+	display: block;
+	width: 128px;
+	height: 34px;
+	margin: 0 auto;
+	margin-bottom: 20px; 
+	text-indent: -999px;
+	overflow: hidden;
+	cursor: pointer;
+	background: url(//static.cikuapp.com/Ciku/img/media/list-page-play-pause.png) no-repeat 0 0;
+}
+.operate-area .operate-box a.startPlayButton:hover {
+	background-position: 0 -34px;
+}
+.operate-area .operate-box a.startPlayButton:active {
+	background-position: 0 -68px;
+}
+.operate-area .operate-box a.startPauseButton {
+	background: url(//static.cikuapp.com/Ciku/img/media/list-page-play-pause.png) no-repeat -128px 0;
+}
+.operate-area .operate-box a.startPauseButton:hover {
+	background-position: -128px -34px;
+}
+.operate-area .operate-box a.startPauseButton:active {
+	background-position: -128px -68px;
+}
+.slideBarForPlay {
+	display: block;
+	font-weight: bold;
+	background: #fff;
+	cursor: pointer;
+	font-style: normal;
+	height: 24px;
+	width: 65px;
+	font-size: 14px;
+	line-height: 28px;
+	text-decoration: none;
+	color: #222;
+	vertical-align: top;
+	border-right: 1px solid #4383de;
+	position: absolute;
+	left: -70px;
+}
+.audiojs:hover {
+	opacity: 1!important;
+}

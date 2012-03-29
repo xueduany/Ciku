@@ -1,0 +1,236 @@
+#login-main,
+#regist-main {
+	width: 980px;
+	height: 900px;
+	background-color: #f5f5f5;
+	position: relative;
+}
+#login-main #login-Window {
+	position: absolute;
+	display: block;
+	width: 382px;
+	top: 154px;
+	left: 300px;
+	border: 1px solid #d7d7d7;
+	box-shadow: 0 0 10px #d7d7d7;
+	background-color: #fff;
+}
+#login-Window #loginForm {
+	height: 200px;
+	color: #818181;
+}
+#login-Window .bottom {
+	border-top: 1px solid #ccd1d4;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+}
+#login-Window .bottom .sep {
+	margin: 0 10px;
+	color: #818181;
+}
+#login-Window .bottom a {
+	text-decoration: none;
+	color: #818181;
+}
+#login-Window .bottom a:hover {
+	text-decoration: underline;
+}
+#login-Window .label-username,
+#login-Window .label-password {
+	display: block;
+	text-align: left;
+	margin-left: 42px;
+	line-height: 30px;
+}
+#login-Window .label-username {
+	padding-top: 8px;
+}
+#login-Window .input-username,
+#login-Window .input-password {
+	width: 295px;
+	height: 33px;
+	border: 1px solid #ccd1d5;
+	line-height: 33px;
+	display: block;
+	border-radius: 3px;
+}
+#login-Window .label-rememberme {
+	position: absolute;
+	left: 160px;
+	top: 163px;
+	cursor: pointer;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: top;
+}
+#login-Window input.btn-submit {
+	position: absolute;
+	left: 42px;
+	top: 156px;
+	width: 88px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	color: #fff;
+	border: 0;
+	overflow: hidden;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	background: url(//static.cikuapp.com/Ciku/img/media/loginbutton.png) no-repeat 0 0;
+}
+#login-Window input.btn-submit:hover {
+	background-position: 0 -31px;
+}
+#login-Window input.btn-submit:active {
+	background-position: 0 -62px;
+}
+#login-Window input.checkbox-rememberme {
+	border: 0;
+}
+/**
+ * 	注册
+ */
+#regist-main .cap,
+#login-main .cap {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 98px;
+	left: 300px;
+	width: 400px;
+}
+#registForm {
+	height: 416px;
+	position: relative;
+	border: 1px solid #d7d7d7;
+	box-shadow: 0 0 10px #d7d7d7;
+	background-color: #fff;
+	position: absolute;
+	width: 382px;
+	top: 154px;
+	left: 300px;
+	color: #818181;
+}
+#regist-main .cap h3,
+#login-main .cap h3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+}
+#regist-main .cap a {
+	position: absolute;
+	color: #818181;
+	left: 173px;
+	top: 27px;
+}
+.cap .login-error {
+	position: absolute;
+	top: 24px;
+	left: 91px;
+}
+#regist-main a {
+	text-decoration: none;
+}
+#regist-main a:hover {
+	text-decoration: underline;
+}
+#registForm ol {
+	padding-top: 20px;
+	padding-left: 40px;
+}
+#registForm li {
+	line-height: 30px;
+}
+#registForm li input {
+	width: 295px;
+	height: 33px;
+	line-height: 33px;
+	border: 1px solid #ccd1d5;
+	display: block;
+	border-radius: 3px;
+}
+#registForm input.btn-submit {
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	width: 88px;
+	height: 31px;
+	line-height: 31px;
+	cursor: pointer;
+	color: #fff;
+	top: 363px;
+	left: 40px;
+	border: 0;
+	background: url(//static.cikuapp.com/Ciku/img/media/loginbutton.png) no-repeat 0 0;
+}
+#registForm input.btn-submit:hover {
+	background-position: 0 -31px;
+}
+#registForm input.btn-submit:active {
+	background-position: 0 -62px;
+}
+#registForm .registError {
+	position: absolute;
+	width: 298px;
+	top: 301px;
+	left: 40px;
+	color: #BF1623;
+}
+.field-validation-error {
+	color: #BF1623;
+}
+#resetPassword-Window {
+	position: absolute;
+	display: block;
+	width: 382px;
+	top: 154px;
+	left: 300px;
+	border: 1px solid #D7D7D7;
+	box-shadow: 0 0 10px #d7d7d7;
+	background-color: white;
+}
+#resetPassword-Window form {
+	margin: 15px 40px;
+	color: #818181;
+}
+#resetPassword-Window form li input {
+	width: 295px;
+	height: 33px;
+	border: 1px solid #CCD1D5;
+	line-height: 33px;
+	display: block;
+	border-radius: 3px;
+}
+#resetPassword-Window form li label {
+	display: block;
+	text-align: left;
+	line-height: 30px;
+}
+.validation-summary-errors {
+	color: #BF1623;
+}
+#resetPassword-Window .submit-btn {
+	display: block;
+	overflow: hidden;
+	width: 88px;
+	height: 31px;
+	line-height: 31px;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	border: 0;
+	background: url(//static.cikuapp.com/Ciku/img/media/loginbutton.png) no-repeat 0 0;
+	margin-top: 20px;
+}
+#resetPassword-Window .submit-btn:hover {
+	background-position: 0 -31px;
+}
+#resetPassword-Window .submit-btn:active {
+	background-position: 0 -62px;
+}

@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: #fff;
+}
+.cap-block {
+	width: 100%;
+	text-align: center;
+}
+.main-block {
+	width: 100%;
+	overflow: hidden;
+	zoom: 1;
+}
+.main-block .left-menu-block {
+	width: 200px;
+	padding-top: 20px;
+	vertical-align: top;
+	text-align: center;
+	border-right: 1px solid #000;
+}
+.main-block .left-menu-block li {
+	margin-bottom: 20px;
+}
+.main-block .right-main-block {
+	vertical-align: top;
+	padding-left: 20px;
+}
+.topboard-menu .media a,
+.topboard-menu .user a,
+.topboard-menu .monitor a {
+	background: url(//static.cikuapp.com/Ciku/img/media/common/tab.png) no-repeat;
+	background-position: 0 -33px;
+	color: #fff;
+}
+.current-tab-is-media .media a,
+.current-tab-is-user .user a,
+.current-tab-is-monitor .monitor a {
+	font-weight: bold;
+	background-position: 0 0px;
+	color: #000;
+}

@@ -1,0 +1,661 @@
+/**
+ * 	lrc编辑start
+ */
+.subtitle-step {
+	width: 100%;
+	background-color: rgba(0,0,0,.12);
+}
+.subtitle-step ul {
+	width: 980px;
+	margin: 0 auto;
+	height: 56px;
+}
+.subtitle-step ul li {
+	display: table-cell;
+	height: 56px;
+	vertical-align: middle;
+}
+.subtitle-step ul li span {
+	margin-right: 50px;
+	display: block;
+	line-height: 56px;
+	text-indent: -999px;
+	vertical-align: middle;
+	overflow: hidden;
+	height: 30px;
+	background-image: url(../img/step.png);
+	background-repeat: no-repeat;
+	width: 100px;
+}
+.subtitle-step ul li .step1 {
+	background-position: -85px 5px;
+}
+.subtitle-step ul li .step2 {
+	background-position: -85px -40px;
+}
+.subtitle-step ul li .step3 {
+	background-position: -85px -85px;
+}
+body.subtitle-step1-add .subtitle-step ul li .step1 {
+	background-color: green;
+	background-position: 15px 5px;
+}
+body.subtitle-step2-edt .subtitle-step ul li .step2 {
+	background-color: green;
+	background-position: 15px -40px;
+}
+.subtitle-panel {
+	width: 980px;
+	height: 600px;
+	margin: 0 auto;
+	padding-top: 20px;
+	position: relative;
+	font-size: 20px;
+}
+body.subtitle-step1-add .subtitle-panel s.triangle, body.subtitle-step2-edt .lrc-create s.triangle {
+	display: block;
+	width: 0;
+	height: 0;
+	border: 10px dashed transparent;
+	border-bottom: 10px solid #f2f2f2;
+	position: absolute;
+	top: -20px;
+	left: 40px;
+}
+body.subtitle-step2-edt .lrc-create s.triangle {
+	left: 190px;
+}
+
+
+/**
+ *
+ */
+/**
+ * 	编辑
+ */
+.lrc-create .resource {
+	height: 500px;
+	position: relative;
+}
+/**
+.lrc-create .audio {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 0 auto 30px;
+}
+.lrc-create .audio .tips {
+	position: absolute;
+	font-size: 0;
+	width: 375px;
+	height: 115px;
+	right: 225px;
+	bottom: 125px;
+	background: url(../img/tip2.png) no-repeat 0 0;
+	z-index: 999;
+	cursor: pointer;
+	display: none;
+}
+.lrc-create .audio .tips-1 {
+	position: absolute;
+	font-size: 0;
+	width: 375px;
+	height: 115px;
+	left: -7px;
+	bottom: 6px;
+	background: url(../img/tip3.png) no-repeat 0 0;
+	z-index: 999;
+	cursor: pointer;
+	display: none;
+}
+.lrc-create .audio .tips-1:before {
+	content: '';
+	position: absolute;
+	box-shadow: 0 0 10px red;
+	font-size: 40px;
+	border-radius: 40px;
+	top: 86px;
+	left: 0px;
+	width: 40px;
+	height: 40px;
+}
+*/
+.connect-subtitle-and-media {
+	content: '';
+	display: none;
+	width: 208px;
+	height: 188px;
+	background: url(../img/pointer2.png) no-repeat 0 0;
+	position: absolute;
+	left: 140px;
+	top: -50px;
+	z-index: 999;
+}
+.resource .lrc-area {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	width: 370px;
+	height: 500px;
+}
+.resource .lrc-area-full {
+	position: absolute;
+	right: 0;
+	width: 980px;
+	height: 500px;
+}
+.resource .creater {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+	width: 600px;
+	height: 100%;
+}
+.lrcTextEditArea textarea {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.lrc-create textarea {
+	background-color: transparent;
+	padding: 5px;
+	border-radius: 0;
+	letter-spacing: 1px;
+}
+.lrc-create textarea:focus {
+	outline: none;
+}
+.lrc-create ::-webkit-scrollbar {
+	height: 5px;
+	width: 9px;
+}
+.lrc-create ::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	border: 1px solid rgba(183,183,183,.4);
+	background-color: rgba(255,255,255, 1);
+	background-clip: padding-box;
+}
+.lrc-create textarea:hover::-webkit-scrollbar-thumb, .lrc-create div:hover::-webkit-scrollbar-thumb, .lrc-create ol:hover::-webkit-scrollbar-thumb {
+	background-image: -webkit-gradient(linear, left top, right top, from(gainsboro), to(white));
+	background-color: rgba(180, 180, 180, 1);
+	border: 1px solid rgba(183,183,183,1);
+}
+.lrc-create ::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+}
+.lrc-create ::-webkit-scrollbar-track {
+	background-color: rgba(180, 180, 180, .4);
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 0 4px;
+}
+.lrc-create textarea:hover::-webkit-scrollbar-track, .lrc-create div:hover::-webkit-scrollbar-track, .lrc-create ol:hover::-webkit-scrollbar-track {
+	background-color: rgba(180, 180, 180, 1);
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+.lrc-create ::-webkit-scrollbar-corner {
+	background: transparent;
+}
+.subtitle-uploadbox {
+	display: none;
+}
+.lrc-create {
+	margin: 0 auto;
+	width: 980px;
+	height: 600px;
+	padding-top: 20px;
+	position: relative;
+}
+#lrc-list {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+}
+#lrc-list li {
+	border: 1px solid transparent;
+	border-bottom: 1px solid #eee;
+	list-style: none;
+	position: relative;
+	width: 100%;
+	display: block;
+	font-size: 15px;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+#lrc-list li.hasParagraphEnd {
+	margin-bottom: 22px;
+}
+#lrc-list li.hasParagraphEnd:after {
+	position: absolute;
+	bottom: -21px;
+	right: 0px;
+	content: '';
+	display: block;
+	height: 22px;
+	width: 362px;
+	background: url(../img/paragraphEnd.png) no-repeat 290px 2px;
+	background-color: rgba(51,153,204,.2);
+}
+#lrc-list li.hasParagraphEnd button.J_lrcParagraphEnd {
+	border-color: #000;
+}
+#lrc-list li.lrc-playing {
+	border: 1px solid #aaa !important;
+	/*font-style: oblique;*/
+	color: white !important;
+	background-color: #aaa !important;
+}
+#lrc-list li.lrc-playing .begin-time-outer {
+	color: white !important;
+}
+#lrc-list li:hover {
+	/*-webkit-animation: highlightLrcRow 300ms ease-in 0ms 1;*/
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+	border-bottom-color: #aaa;
+	background-color: white;
+}
+/*#lrc-list li .operate {
+ height: 0px;
+ -webkit-transform: scaleY(0);
+ -webkit-transform-origin: top left;
+ opacity: 0;
+ }
+ #lrc-list li:hover .operate {
+ -webkit-transform: scaleY(1);
+ -webkit-transition: all 300ms ease-in 0ms;
+ height: 30px;
+ opacity: 1;
+ display: block;
+ }*/
+#lrc-list li.selected {
+	background-color: white;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+#lrc-list li .operate {
+	position: absolute;
+	opacity: 0.2;
+	z-index: 9;
+	top: 0;
+	right: 5px;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+#lrc-list li:hover .operate {
+	opacity: 1;
+}
+#lrc-list li .operate .btns-single, #lrc-list li .operate .btns-multiple {
+	display: inline-block;
+}
+#lrc-list li .operateMultiple .btns-multiple {
+	display: inline-block;
+}
+#lrc-list li .operate button {
+	opacity: 0.3;
+}
+#lrc-list li:hover .operate button {
+	background-color: white;
+	cursor: pointer;
+	opacity: 1;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+.J_lrcDelete, .J_lrcCombine, .J_lrcParagraphEnd {
+	overflow: hidden;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	text-indent: -999px;
+	-webkit-appearance: none;
+	border: 1px solid #ddd;
+}
+.J_lrcDelete {
+	background: url(../img/Undo.png) no-repeat -7px -7px;
+	background-size: 30px 30px;
+}
+.J_lrcCombine {
+	background: url(../img/Combine.png) no-repeat -7px -7px;
+	background-size: 30px 30px;
+}
+.J_lrcParagraphEnd {
+	background: url(../img/para.png) no-repeat 1px 2px;
+	background-size: 15px 14px;
+}
+.J_lrcDelete:hover, .J_lrcCombine:hover, .J_lrcParagraphEnd:hover {
+	border-color: #000;
+}
+.J_lrcModifyTime {
+	display: none;
+}
+#lrc-list li .begin-time-outer {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	font-size: 12px;
+	line-height: 16px;
+	height: 16px;
+	color: green;
+	vertical-align: middle;
+	font-family: Tahoma, Verdana;
+}
+#lrc-list li .begin-time-outer input {
+	width: 56px;
+	color: inherit;
+	z-index: 1;
+	text-align: center;
+	resize: none;
+	font-style: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 12px;
+	height: 16px;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Verdana;
+}
+#lrc-list li .begin-time-outer:before, #lrc-list li .begin-time-outer:after {
+	content: '[';
+	display: inline-block;
+	color: inherit;
+	line-height: 15px;
+	vertical-align: middle;
+	height: 16px;
+	font-style: inherit;
+}
+#lrc-list li .begin-time-outer:after {
+	content: ']';
+}
+#lrc-list li .subtitle {
+	border-radius: 0.5em;
+	background-color: transparent;
+	border: 1px solid transparent;;
+	-webkit-appearance: none;
+	resize: none;
+	font-style: inherit;
+	overflow-x: hidden;
+	outline: none;
+	width: 360px;
+	color: inherit;
+	margin-top: 20px;
+}
+#lrc-list li .begin-time-outer input:focus {
+	/*top: 0px;
+	 left: 0px;
+	 border-bottom: 1px solid #aaa;
+	 border-radius: 0.5em;*/
+	background-color: #aaa;
+	color: white;
+}
+#lrc-list .currentTimePoint {
+	background-color: #000;
+}
+.textarea_lrcTextResource {
+	border: 1px solid transparent;
+	outline: 0;
+	border-radius: 0.5em;
+	resize: none;
+	overflow: hidden;
+	cursor: text;
+}
+#J_lrcTextResourceInput.textarea_lrcTextResourceEditAble {
+	background-color: #fff;
+	cursor: text;
+}
+.lrcTextEditArea {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.lrcTextEditArea .tips {
+	display: none;
+	width: 337px;
+	height: 79px;
+	font-size: 0;
+	background: url(../img/edit-cut.png) no-repeat 0 0;
+	text-indent: -999px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+.lrcTextEditArea .tips-show:after {
+	display: block;
+	position: absolute;
+	bottom: -100px;
+	right: -100px;
+	content: '';
+	width: 100px;
+	height: 100px;
+	background: url(../img/mouse-dblclick.gif);
+}
+.lrcTextEditArea .buttonArea {
+	position: absolute;
+	width: 300px;
+	right: 5px;
+	top: -20px;
+}
+.lrcTextEditArea .buttonArea button {
+	display: block;
+	float: right;
+	width: 30px;
+	margin-left: 16px;
+	height: 30px;
+	border: 2px solid #aaa;
+	text-indent: -999px;
+	background: none;
+	font-size: 30px;
+	font-family: Arail;
+	border-radius: .5em;
+	opacity: 0.3;
+	-webkit-apperance: none;
+	-moz-apperance: none;
+	apperance: none;
+	cursor: pointer;
+	-webkit-transition: all 300ms ease-in 0ms;
+	-moz-transition: all 300ms ease-in 0ms;
+	transition: all 300ms ease-in 0ms;
+}
+.lrcTextEditArea .buttonArea button:hover, .lrcTextEditArea .buttonArea button.selected {
+	border-color: green;
+	opacity: 1;
+	box-shadow: 0 0 10px green;
+}
+#J_createrHelp_btn {
+	background: url(../img/Question.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+#J_editLrc_btn {
+	background: url(../img/edit.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+#J_editLrc_btn.progress {
+	background: url(../img/apply.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+#J_formatLrc_btn {
+	background: url(../img/Tools.png) no-repeat -2px -2px;
+	background-size: 30px 30px;
+}
+.control-params {
+	display: none;
+}
+/**
+ * 	debug
+ */
+#J_LrcSourceFile {
+	display: block;
+}
+.connect-subtitle-and-text {
+	width: 553px;
+	height: 69px;
+	position: absolute;
+	top: 32px;
+	left: 175px;
+	background: url(../img/pointer.png) no-repeat 0 0;
+	z-index: 999;
+}
+.cue {
+	display: none;
+}
+.lrc-area .cue-empty {
+	display: block;
+	position: absolute;
+	top: 108px;
+	left: 80px;
+	width: 300px;
+	height: 400px;
+	background: url(../img/cue-subtitle.png) no-repeat 0 0;
+}
+.lrc-area .cue-empty:after, .creater .cue-success:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background: url(../img/pet.png);
+	width: 186px;
+	height: 159px;
+}
+.creater .cue-success:after {
+	top: 50px;
+	left: 40px;
+}
+.creater .cue-success {
+	display: block;
+	position: absolute;
+	top: 108px;
+	left: 190px;
+	width: 300px;
+	height: 400px;
+	background: url(../img/cue-mediatext-success.png) no-repeat 0 0;
+}
+.creater .cue-failed {
+	display: block;
+	position: absolute;
+	top: 108px;
+	left: 100px;
+	width: 500px;
+	height: 400px;
+	background: url(../img/cue-mediatext-failed.png) no-repeat 0 0;
+}
+.subtitle-step2-edt .submit-area {
+	width: 980px;
+	margin: 3px auto;
+	text-align: center;
+}
+#J_LrcSourceFile, .subtitle-step2-edt .submit-area input, .subtitle-step2-edt .submit-area textarea {
+	display: none;
+}
+.subtitle-step2-edt .submit-area .submit {
+	margin: 0 auto;
+	display: block;
+	width: 190px;
+	height: 40px;
+	border-radius: 10px;
+	-webkit-appearance: none;
+	border: 0;
+	text-indent: -999px;
+	overflow: hidden;
+	background: url(../img/step.png) no-repeat 22px -270px;
+	background-color: green;
+	cursor: pointer;
+	-webkit-transition: all 300ms ease-out 0ms;
+	-moz-transition: all 300ms ease-out 0ms;
+	transition: all 300ms ease-out 0ms;
+	border-image: initial;
+}
+.subtitle-step2-edt .submit-area .submit:active {
+	background-color: #3e6e00;
+}
+.subtitle-step2-edt .submit-area .submit:hover {
+	border-color: green;
+	box-shadow: 0 0 10px green;
+}
+.subtitle-step2-edt .lrc-create:after, .subtitle-panel:after {
+	content: '';
+	display: block;
+	width: 975px;
+	height: 65px;
+	background: url(../img/buttom-bazel.png) no-repeat 0 0;
+	position: absolute;
+	z-index: -1;
+	bottom: 15px;
+	left: 2px;
+}
+
+/*
+ .subtitle-panel .title:before {
+ content: '';
+ display: block;
+ width: 22px;
+ height: 30px;
+ background: url(../img/step-no.png) no-repeat 6px 0;
+ position: absolute;
+ left: -30px;
+ top: -2px;
+ }
+ .subtitle-panel .media-field:before {
+ content: '';
+ display: block;
+ width: 22px;
+ height: 30px;
+ background: url(../img/step-no.png) no-repeat -82px 0;
+ position: absolute;
+ left: -30px;
+ top: -2px;
+ }
+ .subtitle-panel .subtitle-field:before {
+ content: '';
+ display: block;
+ width: 22px;
+ height: 30px;
+ background: url(../img/step-no.png) no-repeat -168px 0;
+ position: absolute;
+ left: -30px;
+ top: -2px;
+ }
+ .subtitle-panel .photo-field:before {
+ content: '';
+ display: block;
+ width: 25px;
+ height: 30px;
+ background: url(../img/step-no.png) no-repeat -258px 0;
+ position: absolute;
+ left: -30px;
+ top: -26px;
+ }
+ */
+
+#J_LrcOrigin, #J_LrcDraft, #J_LrcFinish, #J_media_edit_form * {
+	display: none;
+}
+#J_media_edit_form .submit {
+	display: inline;
+}
+/**
+ * 	lrc编辑end
+ */
+
+/*
+ * 列表页start
+ */
+.rows_status_is_inreview .btn-del, .rows_status_is_inreview .btn-check, .rows_status_is_inreview .btn-edit, .rows_status_is_approved .btn-del, .rows_status_is_approved .btn-edit, .rows_status_is_approved .btn-check {
+	display: none;
+}
+/*
+ * 列表页end
+ */
+
