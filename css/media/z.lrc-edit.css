@@ -585,7 +585,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	text-indent: -999px;
-	background: url(//static.cikuapp.com/Ciku/img/media/button-upload-resource.png) no-repeat 0 0;
+	background: url(/img/media/button-upload-resource.png) no-repeat 0 0;
 }
 #J_submitLrc {
 	margin-top: 5px;

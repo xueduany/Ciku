@@ -78,7 +78,7 @@
 	cursor: pointer;
 	padding: 0;
 	margin: 0;
-	background: url(//static.cikuapp.com/Ciku/img/media/loginbutton.png) no-repeat 0 0;
+	background: url(/img/media/loginbutton.png) no-repeat 0 0;
 }
 #login-Window input.btn-submit:hover {
 	background-position: 0 -31px;
@@ -167,7 +167,7 @@
 	top: 363px;
 	left: 40px;
 	border: 0;
-	background: url(//static.cikuapp.com/Ciku/img/media/loginbutton.png) no-repeat 0 0;
+	background: url(/img/media/loginbutton.png) no-repeat 0 0;
 }
 #registForm input.btn-submit:hover {
 	background-position: 0 -31px;
@@ -225,7 +225,7 @@
 	color: #fff;
 	text-align: center;
 	border: 0;
-	background: url(//static.cikuapp.com/Ciku/img/media/loginbutton.png) no-repeat 0 0;
+	background: url(/img/media/loginbutton.png) no-repeat 0 0;
 	margin-top: 20px;
 }
 #resetPassword-Window .submit-btn:hover {

@@ -86,7 +86,7 @@
 .article-operate a.readmore {
 	padding-left: 20px;
 	font-size: 12px;
-	background: url(//static.cikuapp.com/Ciku/img/media/readmore.png) no-repeat 0 1px;
+	background: url(/img/media/readmore.png) no-repeat 0 1px;
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
@@ -105,7 +105,7 @@
 	overflow: hidden;
 	height: 10px;
 	width: 10px;
-	background: url(//static.cikuapp.com/Ciku/img/media/rss.png) no-repeat 0 0;
+	background: url(/img/media/rss.png) no-repeat 0 0;
 	display: inline-block;
 	*display: inline;
 	*zoom: 1
@@ -123,7 +123,7 @@
 	width: 128px;
 	height: 31px;
 	text-indent: -999px;
-	background: url(//static.cikuapp.com/Ciku/img/media/button-upload-resource.png) no-repeat 0 0;
+	background: url(/img/media/button-upload-resource.png) no-repeat 0 0;
 }
 .mainboard-right .upload-area a.btn-upload-resource:hover {
 	background-position: 0 -31px;

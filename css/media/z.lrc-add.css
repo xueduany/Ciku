@@ -207,7 +207,7 @@ subtitleAddForm .subtitle,
 	cursor: pointer;
 	text-indent: -999px;
 	overflow: hidden;
-	background: url(//static.cikuapp.com/Ciku/img/media/button-upload-resource.png) no-repeat 0 0;
+	background: url(/img/media/button-upload-resource.png) no-repeat 0 0;
 	/*
 	
 	color: #fff;
@@ -337,7 +337,7 @@ subtitleAddForm .subtitle,
 	-moz-appearance: none;
 	apperance: none;
 	border: 0;
-	background: url(//static.cikuapp.com/Ciku/img/media/select-bg.png) no-repeat 0 0;
+	background: url(/img/media/select-bg.png) no-repeat 0 0;
 }
 #subtitleAddForm .kind-field select:focus,
 #subtitleAddForm .kind-field label:focus {

@@ -87,7 +87,7 @@
 	text-indent: -999px;
 	overflow: hidden;
 	cursor: pointer;
-	background: url(//static.cikuapp.com/Ciku/img/media/list-page-play-pause.png) no-repeat 0 0;
+	background: url(/img/media/list-page-play-pause.png) no-repeat 0 0;
 }
 .operate-area .operate-box a.startPlayButton:hover {
 	background-position: 0 -34px;
@@ -96,7 +96,7 @@
 	background-position: 0 -68px;
 }
 .operate-area .operate-box a.startPauseButton {
-	background: url(//static.cikuapp.com/Ciku/img/media/list-page-play-pause.png) no-repeat -128px 0;
+	background: url(/img/media/list-page-play-pause.png) no-repeat -128px 0;
 }
 .operate-area .operate-box a.startPauseButton:hover {
 	background-position: -128px -34px;
