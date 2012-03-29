@@ -28,7 +28,7 @@
  height: 115px;
  right: 225px;
  bottom: 125px;
- background: url(../../img/tip2.png) no-repeat 0 0;
+ background: url(../../Ciku/img/tip2.png) no-repeat 0 0;
  z-index: 999;
  cursor: pointer;
  display: none;
@@ -40,7 +40,7 @@
  height: 115px;
  left: -7px;
  bottom: 6px;
- background: url(../../img/tip3.png) no-repeat 0 0;
+ background: url(../../Ciku/img/tip3.png) no-repeat 0 0;
  z-index: 999;
  cursor: pointer;
  display: none;
@@ -178,7 +178,7 @@
 	display: block;
 	height: 22px;
 	width: 362px;
-	background: url(../../img/paragraphEnd.png) no-repeat 290px 2px;
+	background: url(../../Ciku/img/paragraphEnd.png) no-repeat 290px 2px;
 	background-color: rgba(51,153,204,.2);
 }
 */
@@ -288,15 +288,15 @@
 	border: 1px solid #ddd;
 }
 .J_lrcDelete {
-	background: url(../../img/Undo.png) no-repeat -7px -7px;
+	background: url(../../Ciku/img/Undo.png) no-repeat -7px -7px;
 	background-size: 30px 30px;
 }
 .J_lrcCombine {
-	background: url(../../img/Combine.png) no-repeat -7px -7px;
+	background: url(../../Ciku/img/Combine.png) no-repeat -7px -7px;
 	background-size: 30px 30px;
 }
 .J_lrcParagraphEnd {
-	background: url(../../img/para.png) no-repeat 1px 2px;
+	background: url(../../Ciku/img/para.png) no-repeat 1px 2px;
 	background-size: 15px 14px;
 }
 .J_lrcDelete:hover, .J_lrcCombine:hover, .J_lrcParagraphEnd:hover {
@@ -401,7 +401,7 @@
 	width: 337px;
 	height: 79px;
 	font-size: 0;
-	background: url(../../img/edit-cut.png) no-repeat 0 0;
+	background: url(../../Ciku/img/edit-cut.png) no-repeat 0 0;
 	text-indent: -999px;
 	position: absolute;
 	top: 0;
@@ -417,7 +417,7 @@
 	content: '';
 	width: 100px;
 	height: 100px;
-	background: url(../../img/mouse-dblclick.gif);
+	background: url(../../Ciku/img/mouse-dblclick.gif);
 }
 .lrcTextEditArea .buttonArea {
 	height: 22px;
@@ -455,19 +455,19 @@
 */
 /*
 #J_createrHelp_btn {
-	background: url(../../img/Question.png) no-repeat -2px -2px;
+	background: url(../../Ciku/img/Question.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 #J_editLrc_btn {
-	background: url(../../img/edit.png) no-repeat -2px -2px;
+	background: url(../../Ciku/img/edit.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 #J_editLrc_btn.progress {
-	background: url(../../img/apply.png) no-repeat -2px -2px;
+	background: url(../../Ciku/img/apply.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 #J_formatLrc_btn {
-	background: url(../../img/Tools.png) no-repeat -2px -2px;
+	background: url(../../Ciku/img/Tools.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 */
@@ -486,7 +486,7 @@
 	position: absolute;
 	top: 32px;
 	left: 175px;
-	background: url(../../img/pointer.png) no-repeat 0 0;
+	background: url(../../Ciku/img/pointer.png) no-repeat 0 0;
 	z-index: 999;
 }
 .cue {
@@ -499,7 +499,7 @@
 	left: 109px;
 	width: 300px;
 	height: 400px;
-	background: url(../../img/cue-subtitle.png) no-repeat 0 0;
+	background: url(../../Ciku/img/cue-subtitle.png) no-repeat 0 0;
 }
 .lrc-area .cue-empty:after, .creater .cue-success:after {
 	content: '';
@@ -507,7 +507,7 @@
 	position: absolute;
 	top: 30px;
 	left: 0;
-	background: url(../../img/pet.png);
+	background: url(../../Ciku/img/pet.png);
 	width: 186px;
 	height: 159px;
 }
@@ -522,7 +522,7 @@
 	left: 105px;
 	width: 270px;
 	height: 400px;
-	background: url(../../img/cue-mediatext-success.png) no-repeat 0 0;
+	background: url(../../Ciku/img/cue-mediatext-success.png) no-repeat 0 0;
 }
 .creater .cue-failed {
 	display: block;
@@ -531,7 +531,7 @@
 	left: 15px;
 	width: 500px;
 	height: 400px;
-	background: url(../../img/cue-mediatext-failed.png) no-repeat 0 0;
+	background: url(../../Ciku/img/cue-mediatext-failed.png) no-repeat 0 0;
 }
 .subtitle-step2-edt .submit-area {
 	width: 980px;
@@ -585,7 +585,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	text-indent: -999px;
-	background: url(/img/media/button-upload-resource.png) no-repeat 0 0;
+	background: url(/Ciku/img/media/button-upload-resource.png) no-repeat 0 0;
 }
 #J_submitLrc {
 	margin-top: 5px;

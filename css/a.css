@@ -86,7 +86,7 @@ ul, li {
 	border-left: 1px solid #000;
 	border-right: 1px solid #000;
 	background-color: #1a1a1a;
-	background-image: url(/img/tiny-triangle.png);
+	background-image: url(/Ciku/img/tiny-triangle.png);
 	background-repeat: no-repeat;
 	background-position: 45px 15px;
 }
@@ -183,7 +183,7 @@ ul, li {
 	cursor: pointer;
 	padding: 0;
 	margin: 0;
-	background: url(/img/media/login-button.png) no-repeat 0 0;
+	background: url(/Ciku/img/media/login-button.png) no-repeat 0 0;
 }
 #login-popWindow input.btn-submit:hover {
 	background-position: 0 -31px;
@@ -264,7 +264,7 @@ ul, li {
 }
 .qq-upload-spinner {
 	display: inline-block;
-	background: url("../img/loading.gif");
+	background: url("../Ciku/img/loading.gif");
 	width: 15px;
 	height: 15px;
 	vertical-align: text-bottom;

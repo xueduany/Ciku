@@ -6,7 +6,7 @@
 	width: 980px;
 	height: 40px;
 	display: block;
-	background: url(/img/media/audio-controls.png) no-repeat 0 -118px;
+	background: url(/Ciku/img/media/audio-controls.png) no-repeat 0 -118px;
 	font-family: monospace;
 	font-size: 12px;
 	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.8);
@@ -38,7 +38,7 @@
 	height: 17px;
 	margin-top: 12px;
 	cursor: pointer;
-	background: url(/img/media/audio-controls.png) no-repeat 0 -226px;
+	background: url(/Ciku/img/media/audio-controls.png) no-repeat 0 -226px;
 }
 .kitjs_audio .progress {
 	position: absolute;
@@ -56,7 +56,7 @@
 	right: -9px;
 	top: 0px;
 	overflow: hidden;
-	background: url(/img/media/audio-controls.png) no-repeat -107px -3px;
+	background: url(/Ciku/img/media/audio-controls.png) no-repeat -107px -3px;
 }
 .kitjs_audio .loaded {
 	position: absolute;
@@ -64,7 +64,7 @@
 	left: 0px;
 	height: 17px;
 	width: 0px;
-	background: url(/img/media/audio-controls.png) no-repeat 0 -186px;
+	background: url(/Ciku/img/media/audio-controls.png) no-repeat 0 -186px;
 }
 .kitjs_audio .time {
 	position: absolute;
@@ -75,7 +75,7 @@
 	color: #fff;
 	line-height: 33px;
 	height: 50px;
-	background: url(/img/media/audio-controls.png) no-repeat -226px 0;
+	background: url(/Ciku/img/media/audio-controls.png) no-repeat -226px 0;
 	opacity: 0;
 	display: none;
 	-webkit-transition: all 500ms ease-out 0ms;
@@ -117,7 +117,7 @@
 	white-space: wrap;
 }
 .kitjs_audio .play {
-	background: url(/img/media/audio-controls.png) -43px 5px no-repeat;
+	background: url(/Ciku/img/media/audio-controls.png) -43px 5px no-repeat;
 }
 .kitjs_audio .play:hover {
 	background-position: -43px -28px;
@@ -131,7 +131,7 @@
 .kitjs_audio .error {
 }
 .kitjs_audio .pause {
-	background: url(/img/media/audio-controls.png) 6px 5px no-repeat;
+	background: url(/Ciku/img/media/audio-controls.png) 6px 5px no-repeat;
 }
 .kitjs_audio .pause:hover {
 	background-position: 6px -28px;
@@ -150,7 +150,7 @@
 }
 .kitjs_audio.loading .loading {
 	display: block;
-	background: url(/img/media/loading.gif) no-repeat 7px 7px;
+	background: url(/Ciku/img/media/loading.gif) no-repeat 7px 7px;
 }
 .kitjs_audio.error .time, .error .play, .error .pause, .error .scrubber, .error .loading {
 	display: none;

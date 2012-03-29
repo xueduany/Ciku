@@ -3,7 +3,7 @@ body {
 .topboard {
 	height: 49px;
 	background-color: #3c8ddd;
-	background: url(/img/media/common/topboard-bg.png) repeat-x;
+	background: url(/Ciku/img/media/common/topboard-bg.png) repeat-x;
 	position: relative;
 }
 .topboard-content {
@@ -40,7 +40,7 @@ body {
 .topboard-menu .favorite-resource a,
 .topboard-menu .upload-resource a,
 .topboard-menu .pending-resource a {
-	background: url(/img/media/common/tab.png) no-repeat;
+	background: url(/Ciku/img/media/common/tab.png) no-repeat;
 	background-position: 0 -33px;
 	color: #fff;
 }
@@ -59,7 +59,7 @@ body {
 	display: block;
 	width: 1px;
 	height: 14px;
-	background-image: url(/img/media/common/topboard-corner.png);
+	background-image: url(/Ciku/img/media/common/topboard-corner.png);
 	position: absolute;
 	left: 0px;
 	bottom: 8px;
@@ -68,7 +68,7 @@ body {
 	display: block;
 	width: 1px;
 	height: 14px;
-	background-image: url(/img/media/common/topboard-corner.png);
+	background-image: url(/Ciku/img/media/common/topboard-corner.png);
 	position: absolute;
 	right: 0px;
 	bottom: 8px;
@@ -89,7 +89,7 @@ body {
 	width: 246px;
 	height: 1287px;
 	background: #383838;
-	background: url(/img/media/common/sidebar-bg.png);
+	background: url(/Ciku/img/media/common/sidebar-bg.png);
 }
 .mainboard-right s.bottom-shadow {
 	display: block;
@@ -98,7 +98,7 @@ body {
 	left: 0px;
 	width: 253px;
 	height: 10px;
-	background: url(/img/media/sidebar-seperator.png);
+	background: url(/Ciku/img/media/sidebar-seperator.png);
 }
 .pagination {
 	display: block;
@@ -216,12 +216,12 @@ ol::-webkit-scrollbar-corner {
 .mainboard-ceiling {
 	height: 9px;
 	width: 100%;
-	background: url(/img/media/ceiling.png) repeat-x;
+	background: url(/Ciku/img/media/ceiling.png) repeat-x;
 }
 
 .mainboard-right .download-area {
 	height: 220px;
-	background: url(/img/media/t1.png) no-repeat 0 39px;
+	background: url(/Ciku/img/media/t1.png) no-repeat 0 39px;
 }
 .mainboard-right .download-area .title {
 	color: #fff;
@@ -307,7 +307,7 @@ ol::-webkit-scrollbar-corner {
 	top: 12px;
 	left: 12px;
 	margin-right: 10px;
-	background: url(/img/media/loading.gif);
+	background: url(/Ciku/img/media/loading.gif);
 }
 #float-tips span {
 	text-align: center;

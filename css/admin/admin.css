@@ -30,7 +30,7 @@ body {
 .topboard-menu .media a,
 .topboard-menu .user a,
 .topboard-menu .monitor a {
-	background: url(/img/media/common/tab.png) no-repeat;
+	background: url(/Ciku/img/media/common/tab.png) no-repeat;
 	background-position: 0 -33px;
 	color: #fff;
 }
