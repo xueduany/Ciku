@@ -72,6 +72,7 @@
 }
 .operate-area .gallary-box img {
 	max-width: 425px;
+	max-height: 230px;
 }
 .operate-area .operate-box {
 	text-align: center;
