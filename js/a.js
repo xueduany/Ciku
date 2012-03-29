@@ -19,16 +19,24 @@ $kit.$(function() {
 	if(!$kit.isEmpty($kit.el('#loginLink')) && !$kit.isEmpty($kit.el('#login-popWindow'))) {
 		$kit.ev({
 			el : '#loginLink',
-			ev : 'mouseover',
-			fn : function() {
-				showLoginPop();
+			ev : 'click',
+			fn : function(e) {
+				if($kit.hsCls(e.currentTarget, 'active')) {
+					$kit.rmCls($kit.el('#loginLink'), 'active');
+					$kit.el('#login-popWindow').style.display = '';
+				} else {
+					showLoginPop();
+				}
+				e.stopDefault();
 			}
 		});
 		$kit.ev({
 			el : '#loginLink',
-			ev : 'click',
+			ev : 'mouseover',
 			fn : function(e) {
-				e.stopDefault();
+				if($kit.hsCls(e.currentTarget, 'active')) {
+					showLoginPop();
+				}
 			}
 		});
 		$kit.ev({
@@ -37,7 +45,7 @@ $kit.$(function() {
 			fn : function(e) {
 				if(!$kit.contains($kit.el('#loginLink'), e.relatedTarget)) {
 					window._hide_loginPop = setTimeout(function() {
-						$kit.rmCls($kit.el('#loginLink'), 'hover');
+						$kit.rmCls($kit.el('#loginLink'), 'active');
 						$kit.el('#login-popWindow').style.display = '';
 					}, 300);
 				}
@@ -49,7 +57,7 @@ $kit.$(function() {
 			fn : function(e) {
 				if(!$kit.contains($kit.el('#login-popWindow'), e.relatedTarget)) {
 					window._hide_loginPop = setTimeout(function() {
-						$kit.rmCls($kit.el('#loginLink'), 'hover');
+						$kit.rmCls($kit.el('#loginLink'), 'active');
 						$kit.el('#login-popWindow').style.display = '';
 					}, 300);
 				}
@@ -89,7 +97,32 @@ $kit.$(function() {
 							_re.innerHTML = html;
 						}
 					} else if(res.success == true || res.success == 'true') {
-						$kit.el('#login').innerHTML = '<p>您好, <a class="username" href="/Account/ChangePassword" title="修改密码">' + $kit.el('@UserName')[0].value + '</a>!<a href="/Account/LogOff" title="退出登录">点此退出登陆</a></p>';
+						var html = ['<div id="loginComplete">', //
+						'你好, ', //
+						$kit.el('@UserName')[0].value, '<s></s>', //
+						'<ul class="menu" style="display:none">', //
+						'<li><a href="/Account/ChangePassword">修改密码</a></li>', //
+						'<li><a href="/Account/LogOff">退出登陆</a></li>', //
+						'</ul>', //
+						'</div>'//
+						].join('');
+						$kit.el('#login').innerHTML = html;
+						if(!$kit.isEmpty($kit.el('#loginComplete'))) {
+							$kit.ev({
+								el : $kit.el('#loginComplete'),
+								ev : 'click',
+								fn : function(e) {
+									var ul = $kit.el8cls('menu', $kit.el('#loginComplete'));
+									if(ul.style.display != 'none') {
+										ul.style.display = 'none';
+										$kit.rmCls($kit.el('#loginComplete'), 'active');
+									} else {
+										ul.style.display = '';
+										$kit.adCls($kit.el('#loginComplete'), 'active');
+									}
+								}
+							})
+						}
 					}
 				}
 			});
@@ -98,7 +131,7 @@ $kit.$(function() {
 	}
 	function showLoginPop() {
 		clearTimeout(window._hide_loginPop);
-		$kit.adCls($kit.el('#loginLink'), 'hover');
+		$kit.adCls($kit.el('#loginLink'), 'active');
 		if($kit.el('#login-popWindow').style.display != 'block') {
 			var a = $kit.el('span.kitjs-validator', $kit.el('#login-popWindow'));
 			$kit.each(a, function(o) {
@@ -128,5 +161,21 @@ $kit.$(function() {
 				$kit.widgetInstance[defaultConfig.kitWidgetName].push(new $kit.ui.Validator(cfg));
 			});
 		});
+	}
+	if(!$kit.isEmpty($kit.el('#loginComplete'))) {
+		$kit.ev({
+			el : $kit.el('#loginComplete'),
+			ev : 'click',
+			fn : function(e) {
+				var ul = $kit.el8cls('menu', $kit.el('#loginComplete'));
+				if(ul.style.display != 'none') {
+					ul.style.display = 'none';
+					$kit.rmCls($kit.el('#loginComplete'), 'active');
+				} else {
+					ul.style.display = '';
+					$kit.adCls($kit.el('#loginComplete'), 'active');
+				}
+			}
+		})
 	}
 });

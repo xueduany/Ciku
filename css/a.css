@@ -69,40 +69,76 @@ ul, li {
 #loginForm-ul {
 	position: relative;
 }
-#loginLink {
+#loginForm-ul a {
 	display: block;
 	border-left: 1px solid #2d2d2d;
 	border-right: 1px solid #2d2d2d;
 	width: 57px;
-	height: 29px;
+	height: 27px;
 	padding: 0;
-	text-indent: 11px;
-	text-align: left;
-}
-#loginLink:hover,
-#loginLink.hover {
-	display: block;
-	text-align: left;
-	border-left: 1px solid #000;
-	border-right: 1px solid #000;
-	background-color: #1a1a1a;
-	background-image: url(/Ciku/img/tiny-triangle.png);
-	background-repeat: no-repeat;
-	background-position: 45px 15px;
-}
-#login a {
+	text-align: center;
 	background: none;
 	color: #ccc;
 	font-size: 12px;
 }
-#login p {
-	margin: 0;
-	padding: 0;
-	color: #bbb;
+#loginForm-ul a:active,
+#loginForm-ul a.active {
+	display: block;
+	border-left: 1px solid #000;
+	border-right: 1px solid #1a1a1a;
+	background-color: #1a1a1a;
+	background-repeat: no-repeat;
+	background-position: 45px 15px;
 }
-#login p a {
+#login #loginComplete.active {
+	display: block;
+	border-left: 1px solid #000;
+	border-right: 1px solid #1a1a1a;
+	background-color: #1a1a1a;
+	background-repeat: no-repeat;
+	background-position: 45px 15px;
+}
+#login #loginComplete {
+	margin: 0;
+	padding: 0 10px 0 10px;
+	border-left: 1px solid #2d2d2d;
+	border-right: 1px solid #2d2d2d;
 	color: #bbb;
+	position: relative;
+	cursor: pointer;
+}
+#login #loginComplete s {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 18px;
+	height: 9px;
+	font-size: 0;
+	background: url(/Ciku/img/tiny-triangle.png) no-repeat 6px 3px;
+}
+#login #loginComplete ul.menu {
+	position: absolute;
+	top: 30px;
+	right: -1px;
+	width: 108px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#login #loginComplete ul.menu li {
+	display: block;
+	float: none;
+	clear: both;
+	border: 1px solid #d7d7d7;
+	border-top: 0;
+}
+#login #loginComplete a {
+	color: #818181;
 	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+#login #loginComplete a:hover {
+	background: none;
 }
 #login-popWindow {
 	position: absolute;
@@ -333,4 +369,12 @@ a.qq-upload-cancel {
 	100% {
 		opacity: 1;
 	}
+}
+li.sep i {
+	display: block;
+	width: 1px;
+	height: 11px;
+	background-color: #ccc;
+	font-size: 0;
+	margin-top: 9px;
 }

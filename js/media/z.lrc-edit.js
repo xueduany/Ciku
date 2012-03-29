@@ -1061,6 +1061,7 @@ CikuWeb.Lrc.prototype = {
 	processSubmitData : function() {
 		var subtitleBeginTimeAry = $kit.els8cls("begin-time");
 		var subtitleTextAry = $kit.els8cls("subtitle");
+		$kit.el8id("J_SubtitleText").value = 0;
 		for(var i = 0; !$kit.isEmpty(subtitleBeginTimeAry) && i < subtitleBeginTimeAry.length; i++) {
 			var li = window.lrc.elParentLi(subtitleTextAry[i]), //
 			//lrcText = subtitleTextAry[i].value.replace(/\n+/g, "");
