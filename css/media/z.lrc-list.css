@@ -20,7 +20,7 @@
 }
 .article-title {
 	text-decoration: none;
-	color: black;
+	color: #222;
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 30px;
 	line-height: 35px;
@@ -34,7 +34,7 @@
 .article-title a {
 	display: inline;
 	text-decoration: none;
-	color: black;
+	color: #222;
 	font-weight: 700;
 }
 .article-title {
