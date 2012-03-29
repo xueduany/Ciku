@@ -264,7 +264,7 @@ ul, li {
 }
 .qq-upload-spinner {
 	display: inline-block;
-	background: url("../Ciku/img/loading.gif");
+	background: url("/Ciku/img/loading.gif");
 	width: 15px;
 	height: 15px;
 	vertical-align: text-bottom;

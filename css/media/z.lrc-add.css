@@ -172,7 +172,7 @@ subtitleAddForm .subtitle,
 	text-indent: 0;
 }
 #subtitleAddForm .media-field .tips {
-	background: url(../../Ciku/img/step.png) no-repeat -5px -337px;
+	background: url(/Ciku/img/step.png) no-repeat -5px -337px;
 	width: 185px;
 	height: 30px;
 	margin: 0px auto;
@@ -267,10 +267,10 @@ subtitleAddForm .subtitle,
 }
 /*
 .validate-result-success {
-	background: url(../../Ciku/img/btns.png) no-repeat -118px 0;
+	background: url(/Ciku/img/btns.png) no-repeat -118px 0;
 }
 .validate-result-failed {
-	background: url(../../Ciku/img/btns.png) no-repeat -165px 0;
+	background: url(/Ciku/img/btns.png) no-repeat -165px 0;
 }
 #subtitleAddForm .photo-field .validate-result {
 	left: 210px;

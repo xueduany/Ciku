@@ -23,7 +23,7 @@
 	vertical-align: middle;
 	overflow: hidden;
 	height: 30px;
-	background-image: url(../Ciku/img/step.png);
+	background-image: url(/Ciku/img/step.png);
 	background-repeat: no-repeat;
 	width: 100px;
 }
@@ -91,7 +91,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	height: 115px;
 	right: 225px;
 	bottom: 125px;
-	background: url(../Ciku/img/tip2.png) no-repeat 0 0;
+	background: url(/Ciku/img/tip2.png) no-repeat 0 0;
 	z-index: 999;
 	cursor: pointer;
 	display: none;
@@ -103,7 +103,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	height: 115px;
 	left: -7px;
 	bottom: 6px;
-	background: url(../Ciku/img/tip3.png) no-repeat 0 0;
+	background: url(/Ciku/img/tip3.png) no-repeat 0 0;
 	z-index: 999;
 	cursor: pointer;
 	display: none;
@@ -125,7 +125,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	display: none;
 	width: 208px;
 	height: 188px;
-	background: url(../Ciku/img/pointer2.png) no-repeat 0 0;
+	background: url(/Ciku/img/pointer2.png) no-repeat 0 0;
 	position: absolute;
 	left: 140px;
 	top: -50px;
@@ -236,7 +236,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	display: block;
 	height: 22px;
 	width: 362px;
-	background: url(../Ciku/img/paragraphEnd.png) no-repeat 290px 2px;
+	background: url(/Ciku/img/paragraphEnd.png) no-repeat 290px 2px;
 	background-color: rgba(51,153,204,.2);
 }
 #lrc-list li.hasParagraphEnd button.J_lrcParagraphEnd {
@@ -319,15 +319,15 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	border: 1px solid #ddd;
 }
 .J_lrcDelete {
-	background: url(../Ciku/img/Undo.png) no-repeat -7px -7px;
+	background: url(/Ciku/img/Undo.png) no-repeat -7px -7px;
 	background-size: 30px 30px;
 }
 .J_lrcCombine {
-	background: url(../Ciku/img/Combine.png) no-repeat -7px -7px;
+	background: url(/Ciku/img/Combine.png) no-repeat -7px -7px;
 	background-size: 30px 30px;
 }
 .J_lrcParagraphEnd {
-	background: url(../Ciku/img/para.png) no-repeat 1px 2px;
+	background: url(/Ciku/img/para.png) no-repeat 1px 2px;
 	background-size: 15px 14px;
 }
 .J_lrcDelete:hover, .J_lrcCombine:hover, .J_lrcParagraphEnd:hover {
@@ -423,7 +423,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	width: 337px;
 	height: 79px;
 	font-size: 0;
-	background: url(../Ciku/img/edit-cut.png) no-repeat 0 0;
+	background: url(/Ciku/img/edit-cut.png) no-repeat 0 0;
 	text-indent: -999px;
 	position: absolute;
 	top: 0;
@@ -439,7 +439,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	content: '';
 	width: 100px;
 	height: 100px;
-	background: url(../Ciku/img/mouse-dblclick.gif);
+	background: url(/Ciku/img/mouse-dblclick.gif);
 }
 .lrcTextEditArea .buttonArea {
 	position: absolute;
@@ -474,19 +474,19 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	box-shadow: 0 0 10px green;
 }
 #J_createrHelp_btn {
-	background: url(../Ciku/img/Question.png) no-repeat -2px -2px;
+	background: url(/Ciku/img/Question.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 #J_editLrc_btn {
-	background: url(../Ciku/img/edit.png) no-repeat -2px -2px;
+	background: url(/Ciku/img/edit.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 #J_editLrc_btn.progress {
-	background: url(../Ciku/img/apply.png) no-repeat -2px -2px;
+	background: url(/Ciku/img/apply.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 #J_formatLrc_btn {
-	background: url(../Ciku/img/Tools.png) no-repeat -2px -2px;
+	background: url(/Ciku/img/Tools.png) no-repeat -2px -2px;
 	background-size: 30px 30px;
 }
 .control-params {
@@ -504,7 +504,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	position: absolute;
 	top: 32px;
 	left: 175px;
-	background: url(../Ciku/img/pointer.png) no-repeat 0 0;
+	background: url(/Ciku/img/pointer.png) no-repeat 0 0;
 	z-index: 999;
 }
 .cue {
@@ -517,7 +517,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	left: 80px;
 	width: 300px;
 	height: 400px;
-	background: url(../Ciku/img/cue-subtitle.png) no-repeat 0 0;
+	background: url(/Ciku/img/cue-subtitle.png) no-repeat 0 0;
 }
 .lrc-area .cue-empty:after, .creater .cue-success:after {
 	content: '';
@@ -525,7 +525,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	position: absolute;
 	top: 30px;
 	left: 0;
-	background: url(../Ciku/img/pet.png);
+	background: url(/Ciku/img/pet.png);
 	width: 186px;
 	height: 159px;
 }
@@ -540,7 +540,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	left: 190px;
 	width: 300px;
 	height: 400px;
-	background: url(../Ciku/img/cue-mediatext-success.png) no-repeat 0 0;
+	background: url(/Ciku/img/cue-mediatext-success.png) no-repeat 0 0;
 }
 .creater .cue-failed {
 	display: block;
@@ -549,7 +549,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	left: 100px;
 	width: 500px;
 	height: 400px;
-	background: url(../Ciku/img/cue-mediatext-failed.png) no-repeat 0 0;
+	background: url(/Ciku/img/cue-mediatext-failed.png) no-repeat 0 0;
 }
 .subtitle-step2-edt .submit-area {
 	width: 980px;
@@ -569,7 +569,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	border: 0;
 	text-indent: -999px;
 	overflow: hidden;
-	background: url(../Ciku/img/step.png) no-repeat 22px -270px;
+	background: url(/Ciku/img/step.png) no-repeat 22px -270px;
 	background-color: green;
 	cursor: pointer;
 	-webkit-transition: all 300ms ease-out 0ms;
@@ -589,7 +589,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
 	display: block;
 	width: 975px;
 	height: 65px;
-	background: url(../Ciku/img/buttom-bazel.png) no-repeat 0 0;
+	background: url(/Ciku/img/buttom-bazel.png) no-repeat 0 0;
 	position: absolute;
 	z-index: -1;
 	bottom: 15px;
@@ -602,7 +602,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
  display: block;
  width: 22px;
  height: 30px;
- background: url(../Ciku/img/step-no.png) no-repeat 6px 0;
+ background: url(/Ciku/img/step-no.png) no-repeat 6px 0;
  position: absolute;
  left: -30px;
  top: -2px;
@@ -612,7 +612,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
  display: block;
  width: 22px;
  height: 30px;
- background: url(../Ciku/img/step-no.png) no-repeat -82px 0;
+ background: url(/Ciku/img/step-no.png) no-repeat -82px 0;
  position: absolute;
  left: -30px;
  top: -2px;
@@ -622,7 +622,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
  display: block;
  width: 22px;
  height: 30px;
- background: url(../Ciku/img/step-no.png) no-repeat -168px 0;
+ background: url(/Ciku/img/step-no.png) no-repeat -168px 0;
  position: absolute;
  left: -30px;
  top: -2px;
@@ -632,7 +632,7 @@ body.subtitle-step2-edt .lrc-create s.triangle {
  display: block;
  width: 25px;
  height: 30px;
- background: url(../Ciku/img/step-no.png) no-repeat -258px 0;
+ background: url(/Ciku/img/step-no.png) no-repeat -258px 0;
  position: absolute;
  left: -30px;
  top: -26px;
