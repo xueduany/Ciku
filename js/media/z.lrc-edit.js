@@ -1094,7 +1094,7 @@ $kit.$(function() {
 		 */
 		var audioPlayer = new $kit.ui.Audio({
 			el : $kit.el('#J_media'),
-			swfLocation : 'http://static.cikuapp.com/Ciku/js/audiojs.swf'
+			swfLocation : 'http://xueduany.github.com/KitJs/KitJs/src/js/widget/Audio/audiojs.swf'
 		});
 		audioPlayer.ready(function() {
 			var player = audioPlayer;
