@@ -122,6 +122,8 @@ ul, li {
 	right: -1px;
 	width: 108px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	z-index: 9999;
+	background-color: #fff;
 }
 #login #loginComplete ul.menu li {
 	display: block;
