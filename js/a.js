@@ -176,6 +176,44 @@ $kit.$(function() {
 					$kit.adCls($kit.el('#loginComplete'), 'active');
 				}
 			}
-		})
+		});
+		$kit.ev({
+			el : $kit.el('#loginComplete'),
+			ev : 'mouseout',
+			fn : function(e) {
+				clearTimeout(window._hideLoginCompleteMenu);
+				var ul = $kit.el8cls('menu', $kit.el('#loginComplete'));
+				window._hideLoginCompleteMenu = setTimeout(function() {
+					ul.style.display = 'none';
+					$kit.rmCls($kit.el('#loginComplete'), 'active');
+				}, 300);
+			}
+		});
+		$kit.ev({
+			el : $kit.el8cls('menu', $kit.el('#loginComplete')),
+			ev : 'mouseout',
+			fn : function(e) {
+				clearTimeout(window._hideLoginCompleteMenu);
+				var ul = $kit.el8cls('menu', $kit.el('#loginComplete'));
+				window._hideLoginCompleteMenu = setTimeout(function() {
+					ul.style.display = 'none';
+					$kit.rmCls($kit.el('#loginComplete'), 'active');
+				}, 300);
+			}
+		});
+		$kit.ev({
+			el : $kit.el('#loginComplete'),
+			ev : 'mouseover',
+			fn : function(e) {
+				clearTimeout(window._hideLoginCompleteMenu);
+			}
+		});
+		$kit.ev({
+			el : $kit.el8cls('menu', $kit.el('#loginComplete')),
+			ev : 'mouseover',
+			fn : function(e) {
+				clearTimeout(window._hideLoginCompleteMenu);
+			}
+		});
 	}
 });
