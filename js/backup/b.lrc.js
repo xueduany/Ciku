@@ -850,7 +850,7 @@ Lrc.prototype = {
 			idLi = me.config.timeLine.get(me.config.currentKeyInTimeLine).rowDomId;
 			var lrcTextarea = $kit.el8tag("textarea", $kit.el8id(idLi));
 			// lrcTextarea.value = lrcTextarea.value + subTitle.lrcText;
-			lrcTextarea.kitTextArea.setValue(lrcTextarea.value + me.config.joinStr + subTitle.lrcText);
+			lrcTextarea.kitFormTextArea.setValue(lrcTextarea.value + me.config.joinStr + subTitle.lrcText);
 		}
 		if(hasParagraphEnd) {
 			$kit.adCls($kit.el8id(idLi), "hasParagraphEnd");
@@ -968,7 +968,7 @@ Lrc.prototype = {
 			}
 			var combinedLrcTextarea = me.elLrcTextFromLi(selectedLiAry[0]);
 			if(combinedLrcTextarea) {
-				combinedLrcTextarea.kitTextArea.setValue(combinedLrcTextarea.value + me.config.joinStr + strBufferAry.join(""));
+				combinedLrcTextarea.kitFormTextArea.setValue(combinedLrcTextarea.value + me.config.joinStr + strBufferAry.join(""));
 				$kit.rmCls(selectedLiAry[0], me.config.clsSelected);
 			}
 			me.timeNow();
@@ -1114,9 +1114,9 @@ Lrc.prototype = {
 				var targetElText = me.elLrcTextFromLi(targetLi);
 				var targetElTime = me.elLrcTimeFromLi(targetLi);
 				if($kit.date.parseTime(targetElTime.value) > newTime) {
-					targetElText.kitTextArea.setValue(text.value + targetElText.value);
+					targetElText.kitFormTextArea.setValue(text.value + targetElText.value);
 				} else {
-					targetElText.kitTextArea.setValue(targetElText.value + text.value);
+					targetElText.kitFormTextArea.setValue(targetElText.value + text.value);
 				}
 				me.config.timeLine.rm(oldTimeStr);
 				$kit.rmEl(li);
