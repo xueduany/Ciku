@@ -142,8 +142,9 @@ CikuWeb.Lrc.prototype = {
 				}
 				me.insertLrcRow({
 					lrcText : text,
-					lrcTimeStr : currentTimeStr
+					lrcTimeStr : me.lrcBeginTimeStr ? me.lrcBeginTimeStr : $kit.date.formatTime(0)
 				});
+				me.lrcBeginTimeStr = currentTimeStr;
 				me.timeNow();
 				el.value = el.value.substr(endPos);
 				el.blur();
@@ -255,6 +256,12 @@ CikuWeb.Lrc.prototype = {
 				me.config.nowPlaying = true;
 				me.config.nowEnded = false;
 				me.config.nowPaused = false;
+			}
+		});
+		resource.ev({
+			ev : 'skipTo',
+			fn : function() {
+				me.lrcBeginTimeStr = $kit.date.formatTime(me.config.resource.currentTime);
 			}
 		});
 		/*
@@ -1061,7 +1068,7 @@ CikuWeb.Lrc.prototype = {
 	processSubmitData : function() {
 		var subtitleBeginTimeAry = $kit.els8cls("begin-time");
 		var subtitleTextAry = $kit.els8cls("subtitle");
-		$kit.el8id("J_SubtitleText").value = 0;
+		$kit.el8id("J_SubtitleText").value = '';
 		for(var i = 0; !$kit.isEmpty(subtitleBeginTimeAry) && i < subtitleBeginTimeAry.length; i++) {
 			var li = window.lrc.elParentLi(subtitleTextAry[i]), //
 			//lrcText = subtitleTextAry[i].value.replace(/\n+/g, "");
@@ -1179,6 +1186,7 @@ $kit.$(function() {
 				var btn = e.target;
 				if(!$kit.hsCls(btn, 'J_clicked')) {
 					window.lrc.config.resource.pause();
+					window.lrc.autoSave();
 					window.open('/media/play/' + $kit.el('@guid')[0].value);
 					$kit.adCls(btn, 'J_clicked');
 					setTimeout(function() {
