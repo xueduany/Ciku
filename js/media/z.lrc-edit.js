@@ -678,6 +678,7 @@ CikuWeb.Lrc.prototype = {
 				backTime = $kit.date.parseTime(me.getLrcTimeFromLi(lastLi));
 
 				me.config.resource.skipTo(backTime / me.config.resource.duration);
+				me.lrcBeginTimeStr = $kit.date.formatTime(backTime);
 			}
 			me.timeNow();
 			//
