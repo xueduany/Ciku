@@ -105,7 +105,7 @@ CikuWeb.Lrc.prototype = {
 		 */
 		$kit.ev({
 			el : me.config.lrcTextResource,
-			ev : 'click',
+			ev : 'contextmenu',
 			fn : function(ev, evCfg) {
 				var el = ev.target, me = this;
 				//
@@ -126,6 +126,7 @@ CikuWeb.Lrc.prototype = {
 				// el.setSelectionRange(0, endPos);
 				// var selection = window.getSelection();
 				// var text = selection.toString();
+				ev.stopDefault();
 				var endPos = $kit.selection.getCaretPos(el);
 				var text = el.value.substr(0, endPos);
 				if($kit.isEmpty(text)) {
@@ -541,7 +542,7 @@ CikuWeb.Lrc.prototype = {
 		var idLi = "";
 		var lrcText = subTitle.lrcText.trim();
 		var hasParagraphEnd = false;
-		if(lrcText.indexOf("\\n") + 2 == lrcText.length) {
+		if(lrcText.indexOf("\\n") > -1 && lrcText.indexOf("\\n") + 2 == lrcText.length) {
 			lrcText = lrcText.substring(0, lrcText.indexOf("\\n"));
 			hasParagraphEnd = true;
 		}
@@ -956,24 +957,33 @@ CikuWeb.Lrc.prototype = {
 	autoSave : function() {
 		var me = this;
 		me.processSubmitData();
-		var body = "id=" + $kit.el('@guid')[0].value//
-		+ "&subtitleFinish=" + encodeURIComponent($kit.el8id("J_SubtitleText").value)//
-		+ "&subtitleDraft=" + encodeURIComponent($kit.el8id("J_SubtitleLeft").value);
-		me.saveTips(0);
-		$kit.io.ajax({
-			url : '/api/v2/media/save',
-			params : undefined,
-			method : 'post',
-			async : true,
-			head : undefined,
-			body : body,
-			onSuccess : function(res) {
-				me.saveTips(1);
-			},
-			onError : function() {
-				me.saveTips(2);
-			}
-		});
+		var subtitleFinish = encodeURIComponent($kit.el8id("J_SubtitleText").value);
+		var subtitleDraft = encodeURIComponent($kit.el8id("J_SubtitleLeft").value);
+		if(subtitleFinish == me.subtitleFinish && subtitleDraft == me.subtitleDraft) {
+			return;
+		} else {
+			me.subtitleDraft = subtitleDraft;
+			me.subtitleFinish = subtitleFinish;
+			//
+			var body = "id=" + $kit.el('@guid')[0].value//
+			+ "&subtitleFinish=" + subtitleFinish//
+			+ "&subtitleDraft=" + subtitleDraft;
+			me.saveTips(0);
+			$kit.io.ajax({
+				url : '/api/v2/media/save',
+				params : undefined,
+				method : 'post',
+				async : true,
+				head : undefined,
+				body : body,
+				onSuccess : function(res) {
+					me.saveTips(1);
+				},
+				onError : function() {
+					me.saveTips(2);
+				}
+			});
+		}
 	},
 	saveTips : function(status) {
 		var saveTips = $kit.el('#J_autoSaveTips');
@@ -1112,7 +1122,7 @@ $kit.$(function() {
 			var timeProgressBar = $kit.el8tag('i', $kit.el8cls('progress', playerWrapper));
 			var lrc = new CikuWeb.Lrc({
 				resource : player,
-				lrcSourceFile : $kit.el8id("J_LrcFinish") && $kit.el8id("J_LrcFinish").value.length > 0 ? $kit.el8id("J_LrcFinish") : $kit.el8id("J_LrcOrigin")
+				lrcSourceFile : $kit.el8id("J_LrcFinish") && $kit.el8id("J_LrcFinish").value.length > 0 ? $kit.el8id("J_LrcFinish") : ($kit.el8id("J_LrcDraft").value.length > 0 ? '' : $kit.el8id("J_LrcOrigin"))
 			});
 			window.lrc = lrc;
 			//
