@@ -439,7 +439,7 @@ CikuWeb.Lrc.prototype = {
 		* var selectedLiAry = $kit.els8cls(me.config.clsSelected, me.config.lrcList); if(selectedLiAry.length == 1) { var operate = $kit.el8cls(me.config.clsOperate, selectedLiAry[0]); $kit.adCls(operate, me.config.clsOperateModifyTime); }
 		*/
 		//
-		if(1 == 1 || me.config.nowPlaying) {
+		if(me.config.nowPlaying) {
 			//var currentPlayingLi = $kit.el8cls(me.config., me.config.lrcList);
 			var currentPlayingLi = me.currentPlayingLi;
 			var container = me.config.lrcList;
